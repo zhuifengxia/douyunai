@@ -32,4 +32,7 @@ return [
     'taglib_begin' => '{',
     // 标签库标签结束标记
     'taglib_end'   => '}',
+    // 开启模板布局
+    'layout_on' => true,
+    'layout_name'=>'layouts/index',
 ];
