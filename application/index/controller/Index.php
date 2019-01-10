@@ -43,7 +43,7 @@ class Index extends Controller
     public function newsdetails()
     {
         $this->assign('pagenum', 3);
-        return $this->fetch('contact');
+        return $this->fetch('news_details');
     }
 
 }
