@@ -46,4 +46,11 @@ class Index extends Controller
         return $this->fetch('news_details');
     }
 
+    //合作案例
+    public function coopercase()
+    {
+        $this->assign('pagenum', 5);
+        return $this->fetch('coopercase');
+    }
+
 }

@@ -976,9 +976,8 @@ a {
 }
 .banner-content .banner-btn{
 
-  background-color: #00bc9c;
   display: inline-block;
-  border: none;
+  border: 1px solid white;
   width: 200px;
   height: 50px;
   line-height: 50px;
@@ -999,7 +998,8 @@ a {
     cursor: pointer;*/
 }
 .banner-btn:hover{
-  background-color:#00b792;
+  background-color:white;
+    color:black
 }
 
 .title{
@@ -1175,7 +1175,7 @@ a {
 
 /*** 专业专注 ***/
 .apply{
-  background:url(../img/apply-bg.16824ae5.png) 0 0 no-repeat;
+  background:url(../img/major-bg.eb61e4e9.png) 0 0 no-repeat;
   background-size: cover;
   background-position: center center;
   padding-bottom:87px;
@@ -1197,6 +1197,7 @@ a {
 }
 .form__item{
   width: 100%;
+  text-align: center;
 }
 .form__item input[type="text"]{
   border: none;
@@ -1208,7 +1209,9 @@ a {
   line-height: 40px;
   font-size: 14px;
   margin-top: 30px;
-  border-bottom: 1px solid #fff;
+  border: 1px solid #fff;
+  padding-left: 10px;
+  border-radius: 5px;
 }
 .form__item input[class='form__name']{
   margin-top: 0
@@ -1240,7 +1243,7 @@ a {
   margin-top: 50px;
   display: inline-block;
   border-radius:5px;
-  width: 100%;
+  width: 60%;
   color: #00bc9c;
   font-size: 14px;
   background-color: #fff;
