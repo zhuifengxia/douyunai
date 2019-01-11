@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+{include file="../application/admin/view/layouts/htmlheader.html" /}
+<body class="skin-blue sidebar-mini fixed">
+<div class="wrapper">
+    {include file="../application/admin/view/layouts/mainheader.html" /}
+    {include file="../application/admin/view/layouts/menuer.html" /}
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!--<section class="content-header">-->
+            <!--<h1>-->
+                <!--首页-->
+                <!--<small>欢迎页</small>-->
+            <!--</h1>-->
+        <!--</section>-->
+        <br/> <br/>
+        <!-- Main content -->
+        <section class="content">
+            <div class="container spark-screen">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="panel panel-default">
+                            {__CONTENT__}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.content -->
+    </div><!-- /.content-wrapper -->
+</div><!-- ./wrapper -->
+{include file="../application/admin/view/layouts/htmlfooter.html" /}
+</body>
+</html>

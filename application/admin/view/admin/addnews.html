@@ -1,0 +1,106 @@
+{layout name="layouts/admin" /}
+
+<!-- jQuery 2.1.4 -->
+{js href="/static/admin/plugins/jQuery/jquery-1.9.1.min.js" /}
+
+
+<!-- 富文本编辑器文件 -->
+{js href="/static/admin/ueditor/ueditor.config.js" /}
+{js href="/static/admin/ueditor/ueditor.all.js" /}
+<style>
+    .frame {
+        width: 200px;
+        height: 30px;
+        border: none;
+        vertical-align: middle;
+    }
+    .file{
+        position: absolute;
+        filter: alpha(opacity:0);
+        opacity: 0;
+        width: 70px;
+        height:40px;
+    }
+    .coverfile{
+        right: 48%;
+        top: 21%;
+    }
+    .radioclass{
+        margin-right:20px;
+    }
+</style>
+<div class="panel-heading">{$newsdetails.id?"编辑":"添加"}资讯</div>
+<div class="panel-body">
+    <form action="/admin/news/doAddNews" method="POST" enctype="multipart/form-data" name="newsimgform">
+        <div class="box-body">
+            <div class="form-group">
+                <label>资讯标题</label>
+                <input type="hidden" name="id" value="{$newsdetails.id}"/>
+                <input type="text" id="newstitle" name="newstitle" value="{$newsdetails.news_title}" class="form-control" placeholder="请输入资讯标题">
+            </div>
+
+
+            <div class="form-group" style="clear:both;padding-top:20px;">
+                <label>资讯封面图</label>
+                    <div>
+                        <input type="text" class="form-control" name="newsimg" id="newsimg" style="float:left;width:400px;" value="{$newsdetails.news_img}" />
+                        <input type="button" class="btn btn-primary" value="浏览...">
+                        <input type="file" name="logofile" class="file coverfile" size="28" onchange="document.getElementById('newsimg').value=this.value">
+                        <input type="button" name="coverimgupload" id="coverimgupload" class="btn btn-primary" style="margin-left: 30px;" value="上传">
+                        <iframe id="coverframe" name="coverframe"  class="frame"></iframe>
+                    </div>
+            </div>
+
+            <div class="form-group">
+                <label>选择资讯类型</label>
+               <select class="form-control" name="newstype">
+                   <option value="0" {$newsdetails.news_type==0?"selected":""}>行业资讯</option>
+                   <option value="1" {$newsdetails.news_type==1?"selected":""}>公司动态</option>
+                   <option value="2" {$newsdetails.news_type==2?"selected":""}>热门新闻</option>
+               </select>
+            </div>
+
+
+            <div class="form-group">
+                <label style="display: block;">资讯来源</label>
+                <input type="text" class="form-control" name="newssource" value="{$newsdetails.news_source|default='未知'}" />
+            </div>
+
+
+            <div class="form-group">
+                <label>资讯内容</label>
+                <script type="text/plain" name="newsmsg" id="newsmsg" style="width:100%;height:240px;">
+    {$newsdetails.news_msg|raw}
+</script>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="newssave" class="btn btn-primary">确认保存</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    //实例化编辑器
+    var newsmsg = UE.getEditor('newsmsg',{autoHeightEnabled:false});
+
+    //资讯封面图上传
+    $('#coverimgupload').click(function(){
+        document.newsimgform.action="/admin/uploadfiles";
+        document.newsimgform.target="coverframe";
+        document.newsimgform.submit();
+    });
+    $('#newssave').click(function(){
+        var newstitle=$("#newstitle").val();
+        var newsmsg=document.getElementById('newsmsg').value;
+        if(newstitle==""||newsmsg=="")
+        {
+            alert("文章内容或标题不能为空");
+            return false;
+        }
+        document.newsimgform.action="/admin/news/doAddNews";
+        document.newsimgform.target="";
+        document.newsimgform.submit();
+    });
+</script>

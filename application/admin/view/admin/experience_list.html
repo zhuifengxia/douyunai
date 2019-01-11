@@ -1,0 +1,53 @@
+<div class="panel-heading">用户体验列表
+    <a style="float:right;margin-right:10px;margin-top:-6px;" onclick="experexport()" href="javascript:void(0)" class="btn btn-primary">导出数据</a>
+</div>
+
+<div class="panel-body">
+    <div class="box-body">
+        <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+            <div class="row">
+                <form action="/admin/exper/list" method="post" style="margin-bottom: 20px;">
+                    <input type="text" class="form-control" style="width:250px;" value="{$keywords}" id="keywords" name="keywords" placeholder="请输入手机号"/>
+                    <input type="submit" value="搜索" class="btn btn-primary"/>
+                </form>
+                <div class="col-sm-12">
+                    <table class="table table-hover dataTable" >
+                        <thead>
+                        <tr>
+                            <th>手机号</th>
+                            <th>最近一次体验时间</th>
+                            <th>体验次数</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {foreach $expers as $item}
+                        <tr>
+                            <td style="width:33%">{$item.user_phone}</td>
+                            <td style="width:33%">{$item.create_time|date="Y-m-d H:i:s"}</td>
+                            <td style="width:33%">{$item.use_time}</td>
+                        </tr>
+                        {/foreach}
+                        </tbody>
+                    </table>
+                    <div class="col-sm-7" style="float: right">
+                        {php}echo trim($expers->render(),'"');{/php}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9 ">
+                    {$expers[0]?"":"暂无数据"}
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function experexport() {
+        var keyword=$("#keywords").val();
+        window.location.href="/admin/exper/export?keyword="+keyword;
+    }
+</script>

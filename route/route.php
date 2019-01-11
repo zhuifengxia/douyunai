@@ -10,6 +10,45 @@
 // +----------------------------------------------------------------------
 
 
+/**
+ * 后台登陆
+ */
+Route::group('adminauth',[
+    '/'=>['admin/Adminauth/Login',['method' => 'get']],
+    'dologin'=>['admin/Adminauth/doLogin',['method' => 'post']],
+    'index'=>['admin/Adminauth/index',['method' => 'get']],
+    'loginOut'=>['admin/Adminauth/loginOut'],
+]);
+
+/**
+ * 后台管理
+ */
+Route::group('admin',[
+    //体验用户管理
+    'exper/list'=>['admin/Admin/Experlist',['method' => 'get|post']],
+    //体验用户数据导出
+    'exper/export'=>['admin/Admin/Experexport',['method' => 'get|post']],
+
+    //加盟申请管理
+    'join/list'=>['admin/Admin/Joinlist',['method' => 'get|post']],
+    //加盟申请数据导出
+    'join/export'=>['admin/Admin/Joinexport',['method' => 'get|post']],
+
+    //新闻资讯列表
+    'news/list'=>['admin/Admin/Newslist',['method' => 'get|post']],
+    //添加新闻
+    'news/add/[:id]'=>['admin/Admin/addNews',['method' => 'get']],
+    //新闻保存
+    'news/doAddNews'=>['admin/Admin/doAddNews',['method' => 'post']],
+    //删除新闻
+    'news/delete/:id'=>['admin/Admin/delNews',['method' => 'get']],
+
+    //上传图片
+    'uploadfiles'=>['admin/Admin/uploadFiles',['method' => 'post|get']],
+]);
+
+
+
 
 /**
  * 首页
