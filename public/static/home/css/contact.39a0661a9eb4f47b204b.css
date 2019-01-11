@@ -276,17 +276,6 @@ ul.footer__item li {
   width:1200px;
   margin:0 auto;
 }
-.banner{
-  width:100%;
-  height:574px;
-  background:url(../img/banner.78d804d8.png) center center no-repeat;
-  background-size:cover;
-}
-.banner-content{
-  text-align: center;
-  padding-top: 1px;
-}
-
 
 .title{
   margin:0;
@@ -300,212 +289,96 @@ ul.footer__item li {
   margin: 0 0 20px 0;
 }
 
-/*关于Yeta*/
-.about{
-  width:100%;
-  background:url(../img/about.659e6d82.png) 0 0 no-repeat;
-  padding-bottom: 90px;
-  background-position: center center;
-  padding-bottom:87px;
-}
-.about .title{
-  padding-bottom: 60px;
-}
-.about__list{
-  text-align: center;
-  font-size: 24px;
-}
-.about__list p{
-  margin: 0;
-  line-height: 50px;
-}
 
 
-/** 研发背景 **/
-.background{
-  padding-bottom:106px;
+.ab-banner {
+    background: #f7fafb;
+    padding: 80px 0 30px;
+    background-image: url(../img/effect-bg.0b25b0e2.png);
+    color: #fff;
 }
-.title__line{
-  width:40px;
-  border-bottom:2px solid #333;
-  margin:0 auto;
+.overflow {
+    overflow: hidden;
 }
-.subtitle{
-  font-size: 20px;
-  margin: 36px 0 0 0;
-  color:#555555;
+.width1200 {
+    width: 1100px;
+    margin: auto;
 }
-.background__item{
-  text-align: center;
-  margin-bottom:30px;
+.ab-banner h3 {
+    margin: 65px auto auto;
+    font-size: 50px;
 }
-.background__item .icon1{
-  background: url(../img/background-icon.aba00a0f.png) -10px -10px;
+.ab-banner p {
+    width: 40%;
+    margin-top: 15px;
+    line-height: 35px;
+    font-size: 18px;
+    margin-bottom: 80px;
 }
-.background__item .icon2{
-  background: url(../img/background-icon.aba00a0f.png) -303px -10px;
+.ab-banner .txt {
+    display: inline-block;
+    float: right;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 36px;
 }
-.background__item .icon3{
-  background: url(../img/background-icon.aba00a0f.png) -596px -10px;
+.abjaj {
+    padding-top: 30px;
+    padding-bottom: 50px;
 }
-.background__item .icon4{
-  background: url(../img/background-icon.aba00a0f.png) -889px -10px;
+.abjaj h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+    background: url(../img/abouth.png) no-repeat center bottom;
+    padding-bottom: 20px;
 }
-.background__list{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.abjaj .text {
+    width: 45%;
+    float: right;
+    position: relative;
 }
-.background__icon{
-  display: inline-block;
-  width: 273px; height: 170px;
-  position: relative;
+.abjaj .img {
+    width: 50%;
+    float: left;
+    text-align: center;
+    border: 1px solid #eee;
+    padding: 10px;
+    box-sizing: border-box;
 }
-.background__icon div{
-  margin-top: 130px;
-  width: 100%;
-  height: 40px;
-  background-color: #000;
-  opacity: .5;
+.abjaj h3 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 20px;
 }
-.background__icon p{
-  color: #fff;
-  margin:0;
-  padding: 0;
-  height: 40px;
-  line-height: 40px;
-  font-size: 23px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+.abjaj .text p {
+    margin-top: 12px;
 }
-.background__desc{
-  line-height: 30px;
-  font-size: 18px;
-  margin-top: 10px;
-  text-align: left;
-  width: 273px;
+.abjaj p.biao {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
-
-/** 市场前景**/
-.expect{
-  background-color: #eceff4;
-  padding-bottom: 108px;
+.abjaj .text p {
+    margin-top: 12px;
 }
-.expect_table{
-  /*border: 1px solid #ccc;*/
-  overflow: hidden;
-  display: flex;
-  justify-content:space-between;
+.abjaj .img img {
+    width: 100%;
 }
-.expect_item{
-  width: 394px; height: 394px;
+.abjaj h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+    background: url(../img/abouth.png) no-repeat center bottom;
+    padding-bottom: 20px;
 }
-.expect_item3{
-  background: url(../img/expect.cc19ac77.png) -10px -10px;
+.contact {
+    position: relative;
 }
-.expect_item2{
-  background: url(../img/expect.cc19ac77.png) -424px -10px;
+.caico {
+    width: 24px;
+    margin-right: 20px;
+    vertical-align: middle;
 }
-.expect_item1{
-  background: url(../img/expect.cc19ac77.png) -838px -10px;
-}
-.expect_item_title{
-  text-align: center;
-  font-size: 22px;
-  color: #fff;
-  margin-top: 110px;
-}
-.expect_item_content{
-  text-align: left;
-  font-size: 18px;
-  line-height: 40px;
-  padding: 0 40px;
-  margin-top: 50px;
-}
-
-
-/** 未来愿景**/
-.future{
-  width:100%;
-  background:url(../img/future.a0d9e0b8.png) 0 0 no-repeat;
-  padding-bottom: 90px;
-  color: #fff;
-  background-position: center center;
-  padding-bottom:87px;
-}
-.future .title{
-  padding-top: 80px;
-  padding-bottom: 50px;
-  color: #fff;
-}
-.future .title__txt{
-  color: #fff;
-}
-.future .title__line{
-  border-bottom: 2px solid #fff;
-}
-.future__list{
-  text-align: center;
-  font-size: 24px;
-}
-.future__list p{
-  margin: 0;
-  line-height: 50px;
-}
-
-
-
-/** 联系我们 **/
-.connect{
-  padding-bottom:106px;
-  margin: 0 auto;
-}
-.connect__content{
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-}
-.connect__item{
-  margin: 15px;
-
-  float: left;
-  padding-left: 80px;
-  box-sizing:border-box;
-}
-.connect__item p{
-
-}
-
-
-@media (min-width: 768px){
-  .container {
-    margin:0 auto;
-      width: 750px;
-  }
-
-}
-
-@media (min-width: 992px){
- 
-  .container {
-    margin:0 auto;
-      width: 970px;
-  }
-
-}
-
-@media (min-width: 1200px){
-  
-  .container {
-    margin:0 auto;
-      width: 1170px;
-  }
-}
-
-
-
-
-
-
