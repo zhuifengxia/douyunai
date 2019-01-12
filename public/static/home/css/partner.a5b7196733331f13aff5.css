@@ -58,7 +58,7 @@ html,body{
     top:50%;
     margin-top: 37px;
     right: 2px;
-    background-color: #00bc9c;
+    background-color: #4ebef6;
     cursor: pointer;
     display: none;
     border-radius: 5px;
@@ -82,7 +82,7 @@ html,body{
     transform: rotate(45deg);
 }
 .backToTop:hover{
-    background-color: #0da78c;
+    background-color: #327ccf;
 }
 .backToTop:hover .backToTop-arr{
     margin-top: 25px;
@@ -169,7 +169,7 @@ html,body{
 	font-size: 16px;
 }
 .navbar a.selected{
-	border-bottom:4px solid #1ab394;
+	border-bottom:4px solid #4ebef6;
 }
 .navbar a{
 	color:#fff;
@@ -1072,7 +1072,7 @@ a {
   overflow: hidden;
 }
 .policy_column:hover .policy_column_top{
-  border-bottom:1px solid #00bc9c;
+  border-bottom:1px solid #4ebef6;
 }
 .policy_column:last-child{
   border-right:none;
@@ -1165,11 +1165,11 @@ a {
   margin-right: 10px;
 }
 .coll__item:hover{
-  border:1px solid #00bc9c;
+  border:1px solid #4ebef6;
   cursor: pointer;
 }
 .coll__item:hover .coll__item__header{
-  border-bottom:1px solid #00bc9c;
+  border-bottom:1px solid #4ebef6;
 }
 
 
@@ -1244,7 +1244,7 @@ a {
   display: inline-block;
   border-radius:5px;
   width: 60%;
-  color: #00bc9c;
+  color: #4ebef6;
   font-size: 14px;
   background-color: #fff;
 }
