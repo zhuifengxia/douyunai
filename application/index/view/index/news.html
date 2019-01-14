@@ -1,182 +1,91 @@
 <div class="banner"><h1>行业热点、产品更新、一览无余</h1></div>
 <div class="tabs">
-    <div class="tab selected" onclick="tabchange(0,this)">公司动态</div>
-    <div class="tab" onclick="tabchange(1,this)">行业新闻</div>
+    <div class="tab {$datatype==0?'selected':''}" onclick="tabchange(0)">行业资讯</div>
+    <div class="tab {$datatype==1?'selected':''}" onclick="tabchange(1)">公司动态</div>
+    <div class="tab {$datatype==2?'selected':''}" onclick="tabchange(2)">热门新闻</div>
 </div>
 <div id="js_newsList" class="news container">
-    <div class="news__nav"><span><a href="index.html">首页</a></span> <span>&gt;</span> <span><a
-            href="news.html">动态</a></span></div>
-    <div id="js_company" class="news__list">
+    <div class="news__nav"><span><a href="index.html">首页</a></span> <span>&gt;</span>
+        <span><a>{$datatype==0?'行业资讯':($datatype==1?'公司动态':'热门新闻')}</a></span></div>
+    <div id="js_news" class="news__list">
         <div class="news__content">
+            {foreach $newslist as $item}
             <div class="news__item">
                 <div class="news__item__img"><img
-                        src="https://www.xfyeta.com/news/wp-content/uploads/2018/11/微信图片_20181123105155.jpg"></div>
-                <div class="new__item__body"><p class="news__title"><a target="_blank" href="news_259.html">双11过后，提高业绩的客户回访这样做!</a>
+                        src="..{$item.news_img}"></div>
+                <div class="new__item__body">
+                    <p class="news__title">
+                    <a target="_blank" href="newdetail/{$item.id}">{$item.news_title}</a>
                 </p>
-                    <p class="news__desc">双十一过后，对于商家来说，除了要忙于打包发货外，邀请好评也是店铺的重要工作，得到用户好评，就会有更多的人来购买产品，评价好转化率才高。
-                        但这样的回访你想回复吗？ “亲爱哒，宝贝收到了吗？满意的话请给我们一个好评吧！***…</p>
-                    <p class="news__date">2018-11-23 10:53:23</p></div>
+                    <p class="news__desc">{$item.news_msg|mb_substr=0,150,'utf-8'} ... </p>
+                    <p class="news__date">{$item.create_time|date="Y-m-d H:i:s"}</p></div>
             </div>
-            <div class="news__item">
-                <div class="news__item__img"><img
-                        src="https://www.xfyeta.com/news/wp-content/uploads/2018/10/微信图片_20180901165528.png"></div>
-                <div class="new__item__body"><p class="news__title"><a target="_blank" href="news_173.html">Yeta帮助德广金服打造高效率营销，节省人力90%，营业额提升160%！</a>
-                </p>
-                    <p class="news__desc">河南德广金服是一家专注于金融外包服务的公司，致力于为广大顾客解决资金需求问题。电话营销的低效率、高成本一直困扰着金融行业经营者们，德广金服也不例外。
-                        在对比使用多家机器人后，德广金服最终选择了Yeta电话机器人。用10台…</p>
-                    <p class="news__date">2018-09-30 09:54:34</p></div>
-            </div>
-            <div class="news__item">
-                <div class="news__item__img"><img src="https://www.xfyeta.com/news/wp-content/uploads/2018/07/3.jpg">
-                </div>
-                <div class="new__item__body"><p class="news__title"><a target="_blank" href="news_171.html">节省80%人力，日均400组A类客户，Yeta助力青岛翼家快速布局通讯市场</a>
-                </p>
-                    <p class="news__desc">
-                        青岛翼家生活文化传播有限公司是一家专注于为通讯行业提供一站式外呼解决方案的企业，在成立之初就积极引入Yeta电话机器人，日均获客400组A类客户，效率提升了10倍，原来50多人外呼团队才能完成的事情，现在仅需10多人即可…</p>
-                    <p class="news__date">2018-09-19 16:22:51</p></div>
-            </div>
-            <div class="news__item">
-                <div class="news__item__img"><img src="https://www.xfyeta.com/news/wp-content/uploads/2018/07/2.jpg">
-                </div>
-                <div class="new__item__body"><p class="news__title"><a target="_blank" href="news_113.html">不只是打电话，人工智能让你的销售变营销专家</a>
-                </p>
-                    <p class="news__desc">我们先做一个选择题：
-                        有这样2个销售员，小王一个月跟进100个客户，成交20个；小杨，跟进了120个客户，成交了24个。成单率都在20%，假如你是老板，你选择谁？
-                        很明显，老板都喜欢小杨这样的员工。因为聪明的老板懂得思考…</p>
-                    <p class="news__date">2018-07-11 13:45:09</p></div>
-            </div>
-            <div class="news__item">
-                <div class="news__item__img"><img src="https://www.xfyeta.com/news/wp-content/uploads/2018/06/2.jpg">
-                </div>
-                <div class="new__item__body"><p class="news__title"><a target="_blank" href="news_83.html">对话为何总被打断？恭喜你，可能要成单了！</a>
-                </p>
-                    <p class="news__desc">自从有了电销机器人 电销效率提升、解放人力触手可及 但是机器人与人对话自然吗？支持打断吗？
-                        效果一直是大家的关注所在，Yeta电销机器人的话术可配置打断功能，对话想打断就打断！ 没概念？下面是Yeta与客户的 对话录音，…</p>
-                    <p class="news__date">2018-06-13 09:40:42</p></div>
-            </div>
-            <div class="news__item">
-                <div class="news__item__img"><img
-                        src="https://www.xfyeta.com/news/wp-content/uploads/2018/05/微信图片_20180531103235.jpg"></div>
-                <div class="new__item__body"><p class="news__title"><a target="_blank" href="news_71.html">对话准确率超90%，精准筛选意向客户的制胜武器</a>
-                </p>
-                    <p class="news__desc">
-                        人机自然交互的前提就是足够高的对话准确率，会错客户语义，错误标记意向客户，很可能造成人力跟进的精力浪费，优质客户的大量流失。而准确读懂对话信息，理解客户意图，才能让意向客户筛选更精准，销售转化率更高。
-                        来自科大讯飞，Ye…</p>
-                    <p class="news__date">2018-05-31 13:58:35</p></div>
-            </div>
-            <div class="news__item">
-                <div class="news__item__img"><img
-                        src="https://www.xfyeta.com/news/wp-content/uploads/2018/06/QQ截图20180613095408.jpg"></div>
-                <div class="new__item__body"><p class="news__title"><a target="_blank" href="news_69.html">免费试用活动惊喜加推，最后50个名额定向放送！</a>
-                </p>
-                    <p class="news__desc">
-                        走过金三银四，迎来火红五月，经历了春天的踌躇满志，很多企业也开始在初夏的五月迎来锦绣“钱”程。作为企业开单拓客的电销神器——Yeta电销机器人也在近日开展免费试用活动，助力企业精准获客、轻松成单。
-                        强悍性能，腼腆功耗 Y…</p>
-                    <p class="news__date">2018-05-17 09:45:01</p></div>
-            </div>
+            {/foreach}
         </div>
         <div class="news__btn">
-            <button id="js_companyMore" class="vhidden">查看更多新闻</button>
+            {$newslist->render()}
         </div>
     </div>
-    <div id="js_industry" class="news__list hidden">
+    <div id="js_company" class="news__list hidden">
         <div class="news__content">
+            {foreach $newslist as $item}
             <div class="news__item">
                 <div class="news__item__img"><img
-                        src="https://www.xfyeta.com/news/wp-content/uploads/2018/12/微信图片_20181225111042-300x200.jpg">
-                </div>
-                <div class="new__item__body"><p class="news__title"><a target="_blank" href="news_295.html">智能语音产业再迎利好消息，工信部宣布将推动智能语音AI核心技术发展</a>
-                </p>
-                    <p class="news__desc">
-                        近日，由上海市经济和信息化委员会、安徽省经济和信息化厅指导，中国语音产业联盟主办的“2018中国语音产业联盟年会”在上海成功举办。作为国内智能语音领域最具影响力的盛会之一，本次会议梳理了目前国内语音产业所取得的阶段性成绩…</p>
-                    <p class="news__date">2018-12-25 11:12:07</p></div>
+                        src="..{$item.news_img}"></div>
+                <div class="new__item__body">
+                    <p class="news__title">
+                        <a target="_blank" href="newdetail/{$item.id}">{$item.news_title}</a>
+                    </p>
+                    <p class="news__desc">{$item.news_msg|mb_substr=0,150,'utf-8'} ... </p>
+                    <p class="news__date">{$item.create_time|date="Y-m-d H:i:s"}</p></div>
             </div>
-            <div class="news__item">
-                <div class="news__item__img"><img
-                        src="https://www.xfyeta.com/news/wp-content/uploads/2018/11/微信图片_20181129135346-300x200.jpg">
-                </div>
-                <div class="new__item__body"><p class="news__title"><a target="_blank" href="news_278.html">福布斯发布2019年数字转型趋势报告，智能语音赛道或成明年最大热门</a>
-                </p>
-                    <p class="news__desc">
-                        了解数字转型不仅是预测技术转变，更是包括了技术、商业等多领域的组织变革。《福布斯》的研究员采用了过去了一年的数字转型研究报告，发布了《2019年数字转型趋势》预测报告，旨在为公司在商业化及数字转型领域指出一些方向。5G商…</p>
-                    <p class="news__date">2018-11-29 13:54:52</p></div>
-            </div>
-            <div class="news__item">
-                <div class="news__item__img"><img
-                        src="https://www.xfyeta.com/news/wp-content/uploads/2018/11/微信图片_20181123164507.jpg"></div>
-                <div class="new__item__body"><p class="news__title"><a target="_blank" href="news_264.html">AI到底有啥用？世界各国纷纷加注、将AI列为国家战略！</a>
-                </p>
-                    <p class="news__desc">“如果一国政府对人工智能技术进行管制，禁止使用，那就意味着相关的研发和生产会转移到别的国家进行。”——奇点大学创始人彼得•戴曼迪斯
-                        这种情况当然没有发生，现在人工智能已经上升到国家层面的激烈博弈，各国争相制定AI发展战略…</p>
-                    <p class="news__date">2018-11-23 16:46:07</p></div>
-            </div>
-            <div class="news__item">
-                <div class="news__item__img"><img src="https://www.xfyeta.com/news/wp-content/uploads/2018/11/33.jpg">
-                </div>
-                <div class="new__item__body"><p class="news__title"><a target="_blank" href="news_194.html">销冠与销弱之间只隔一个“霍普金斯循环图”</a>
-                </p>
-                    <p class="news__desc">销售就是一个不断拓新、维系老客户并最终成单的过程。
-                        但销售从来没有那么轻而易举，有时用尽手段也未必能获取到很多新客户，费尽心力也无法阻止客户流失，我们能做到的不过是尽量延长客户的生命周期罢了。 世界级销售大师汤姆.霍普金…</p>
-                    <p class="news__date">2018-10-11 10:57:40</p></div>
-            </div>
-            <div class="news__item">
-                <div class="news__item__img"><img
-                        src="https://www.xfyeta.com/news/wp-content/uploads/2018/10/e4cbd0547ac545fba159cb4fddfa167d.jpeg">
-                </div>
-                <div class="new__item__body"><p class="news__title"><a target="_blank" href="news_186.html">银行业全面跨入智能客服时代，营销外呼也为期不远！</a>
-                </p>
-                    <p class="news__desc">根据CTI论坛9月25日报道，随着各家银行的“智能客服平台项目”成功运作。目前，我国5大国有银行和12家全国性股份制商业银行已全部上线智能客服。
-                        借助智能客服，银行可为客户提供语音热线、网银、手机银行、VTM(远程视频服…</p>
-                    <p class="news__date">2018-10-09 13:39:11</p></div>
-            </div>
-            <div class="news__item">
-                <div class="news__item__img"><img
-                        src="https://www.xfyeta.com/news/wp-content/uploads/2018/10/c5be7cb604ab4681ab2b303615e1427b.jpeg">
-                </div>
-                <div class="new__item__body"><p class="news__title"><a target="_blank" href="news_180.html">A I
-                    “砍价”机器人真的那么6？ 也许电销获客更适合用AI机器人</a></p>
-                    <p class="news__desc">
-                        摆地摊很常见，在每个城市灯红酒绿夜晚，在琳琅满目的夜市小角落，充斥着各色各样的地摊生意。女装、小饰品、图书杂志……远低于市场的价格放置出售，运气好，你会挑选到物美价廉的小玩意。
-                        可你见过的几乎都是小年轻摆地摊，由机器人摆…</p>
-                    <p class="news__date">2018-10-09 11:33:54</p></div>
-            </div>
-            <div class="news__item">
-                <div class="news__item__img"><img
-                        src="https://www.xfyeta.com/news/wp-content/uploads/2018/09/2-300x200.jpg"></div>
-                <div class="new__item__body"><p class="news__title"><a target="_blank" href="news_166.html">马云李彦宏接连发言，未来不懂AI的企业该走向何方？</a>
-                </p>
-                    <p class="news__desc">
-                        9月17日，2018世界人工智能大会在上海西岸正式开幕。大会规格非常高，由国家发展和改革委员会、科学技术部、工业和信息化部、国家互联网信息办公室、中国科学院、中国工程院、上海市人民政府联合主办；邀请来的嘉宾，都是业内顶级…</p>
-                    <p class="news__date">2018-09-19 16:17:02</p></div>
-            </div>
-            <div class="news__item">
-                <div class="news__item__img"><img
-                        src="https://www.xfyeta.com/news/wp-content/uploads/2018/09/43f306a2eaaf4db6a9ed842585359d26.jpeg">
-                </div>
-                <div class="new__item__body"><p class="news__title"><a target="_blank" href="news_161.html">被人工智能抢走饭碗的那批人，后来都过的怎么样了？</a>
-                </p>
-                    <p class="news__desc">
-                        从人工智能这一概念刚刚被热炒之时起，很多人可能都没想到，这场由科技进步所引发的生产力革命，要比人类历史上任何一次创新迭代来的都要迅速。短短不过几年时间，大量的人工智能技术落地，无论在C端还是B端，都展现出让人惊叹的超高效…</p>
-                    <p class="news__date">2018-09-14 11:19:25</p></div>
-            </div>
+            {/foreach}
         </div>
         <div class="news__btn">
-            <button id="js_industryMore">查看更多新闻</button>
+            {$newslist->render()}
+        </div>
+    </div>
+    <div id="js_hot" class="news__list hidden">
+        <div class="news__content">
+            {foreach $newslist as $item}
+            <div class="news__item">
+                <div class="news__item__img"><img
+                        src="..{$item.news_img}"></div>
+                <div class="new__item__body">
+                    <p class="news__title">
+                        <a target="_blank" href="newdetail/{$item.id}">{$item.news_title}</a>
+                    </p>
+                    <p class="news__desc">{$item.news_msg|mb_substr=0,150,'utf-8'} ... </p>
+                    <p class="news__date">{$item.create_time|date="Y-m-d H:i:s"}</p></div>
+            </div>
+            {/foreach}
+        </div>
+        <div class="news__btn">
+            {$newslist->render()}
         </div>
     </div>
 </div>
 
 <script>
-    function tabchange(datatype,obj) {
-        $(".tab").removeClass("selected");
-        $(obj).addClass("selected");
-        if(datatype==1){
-            $("#js_company").addClass("hidden");
-            $("#js_industry").removeClass("hidden");
-        }else{
-            $("#js_company").removeClass("hidden");
-            $("#js_industry").addClass("hidden");
-        }
 
+    $(function () {
+        var datatype = {$datatype?:0};
+        if(datatype==0){
+            $("#js_news").removeClass("hidden");
+            $("#js_company").addClass("hidden");
+            $("#js_hot").addClass("hidden");
+        }else if (datatype==1){
+            $("#js_news").addClass("hidden");
+            $("#js_company").removeClass("hidden");
+            $("#js_hot").addClass("hidden");
+        }else{
+            $("#js_news").addClass("hidden");
+            $("#js_company").addClass("hidden");
+            $("#js_hot").removeClass("hidden");
+        }
+    })
+
+    function tabchange(datatype) {
+        window.location.href="/news/"+datatype;
     }
 </script>

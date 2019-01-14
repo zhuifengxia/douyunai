@@ -55,11 +55,11 @@ Route::group('admin',[
  */
 Route::group('/',[
     '/'=>['index/Index/index',['method' => 'get']],
-    'news'=>['index/Index/news',['method' => 'get']],
+    'news/[:datatype]'=>['index/Index/news',['method' => 'get']],
     'product'=>['index/Index/product',['method' => 'get']],
     'partner'=>['index/Index/partner',['method' => 'get']],
     'contact'=>['index/Index/contact',['method' => 'get']],
-    'news_detail'=>['index/Index/newsdetails',['method' => 'get']],
+    'newdetail/:id'=>['index/Index/newsdetails',['method' => 'get']],
     'joinapply'=>['index/Index/joinapply',['method' => 'post']],
 ]);
 

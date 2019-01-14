@@ -301,7 +301,7 @@ ul.footer__item li {
 	cursor: pointer;
 }
 .tab.selected{
-	background-color:#00bc9c;
+	background-color:#4ebef6;
 }
 .tab:hover{
 	text-decoration: underline;
@@ -313,7 +313,7 @@ ul.footer__item li {
 	text-align: left;
 }
 .news__nav a{
-	color:#00bc9c;
+	color:#4ebef6;
 	font-size: 18px;
 	text-decoration: none;
 }
@@ -329,7 +329,7 @@ ul.footer__item li {
 	text-decoration: none;
 }
 .news__item:hover .news__title a{
-	color:#00bc9c;
+	color:#4ebef6;
 }
 .news__item__img{
 	width:207px;
@@ -364,6 +364,7 @@ ul.footer__item li {
 }
 .news__btn{
 	text-align: center;
+    margin: 40px 0 80px 0;
 }
 .news__btn button{
 	color: #00bc9c;

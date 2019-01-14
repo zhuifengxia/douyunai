@@ -7,6 +7,24 @@ class Index extends Controller
     //首页
     public function index()
     {
+        //获取6条新闻资讯
+        $newslst=Db::table('douyun_news')
+            ->order('id desc')
+            ->limit(6)
+            ->select();
+        $news=array();
+        $news2=array();
+        for($i=0;$i<count($newslst);$i++){
+            $newslst[$i]['news_msg']=strip_tags($newslst[$i]['news_msg']);
+            if($i<3){
+                $news[]=$newslst[$i];
+            }else{
+                $news2[]=$newslst[$i];
+            }
+        }
+        $this->assign('newslist', $news);
+        $this->assign('newslist2', $news2);
+
         $this->assign('pagenum', 0);
         return $this->fetch('index');
     }
@@ -26,8 +44,17 @@ class Index extends Controller
     }
 
     //新闻动态
-    public function news()
+    public function news($datatype=0)
     {
+        $newslst = Db::table('douyun_news')
+            ->where('news_type', $datatype)
+            ->order('id desc')
+            ->paginate(10, false, ['query' => request()->param()])->each(function ($item, $key) {
+                $item['news_msg'] = strip_tags($item['news_msg']);
+                return $item;
+            });
+        $this->assign('newslist', $newslst);
+        $this->assign('datatype', $datatype);
         $this->assign('pagenum', 3);
         return $this->fetch('news');
     }
@@ -40,8 +67,12 @@ class Index extends Controller
     }
 
     //新闻详情
-    public function newsdetails()
+    public function newsdetails($id=0)
     {
+        $newsdetail=Db::table('douyun_news')
+            ->where('id',$id)
+            ->find();
+        $this->assign('news_details', $newsdetail);
         $this->assign('pagenum', 3);
         return $this->fetch('news_details');
     }
