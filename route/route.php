@@ -60,9 +60,7 @@ Route::group('/',[
     'partner'=>['index/Index/partner',['method' => 'get']],
     'contact'=>['index/Index/contact',['method' => 'get']],
     'news_detail'=>['index/Index/newsdetails',['method' => 'get']],
-    'dologin'=>['admin/Adminauth/doLogin',['method' => 'post']],
-    'index'=>['admin/Adminauth/index',['method' => 'get']],
-    'loginOut'=>['admin/Adminauth/loginOut'],
+    'joinapply'=>['index/Index/joinapply',['method' => 'post']],
 ]);
 
 return [
