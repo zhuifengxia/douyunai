@@ -58,7 +58,7 @@ html,body{
     top:50%;
     margin-top: 37px;
     right: 2px;
-    background-color: #4ebef6;
+    background-color: #2a499d;
     cursor: pointer;
     display: none;
     border-radius: 5px;
@@ -169,7 +169,7 @@ html,body{
 	font-size: 16px;
 }
 .navbar a.selected{
-	border-bottom:4px solid #4ebef6;
+	border-bottom:4px solid #2a499d;
 }
 .navbar a{
 	color:#fff;

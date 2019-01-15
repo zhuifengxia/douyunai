@@ -58,7 +58,7 @@ html,body{
     top:50%;
     margin-top: 37px;
     right: 2px;
-    background-color: #4ebef6;
+    background-color: #2a499d;
     cursor: pointer;
     display: none;
     border-radius: 5px;
@@ -169,7 +169,7 @@ html,body{
 	font-size: 16px;
 }
 .navbar a.selected{
-	border-bottom:4px solid #4ebef6;
+	border-bottom:4px solid #2a499d;
 }
 .navbar a{
 	color:#fff;
@@ -1072,7 +1072,7 @@ a {
   overflow: hidden;
 }
 .policy_column:hover .policy_column_top{
-  border-bottom:1px solid #4ebef6;
+  border-bottom:1px solid #2a499d;
 }
 .policy_column:last-child{
   border-right:none;
@@ -1168,11 +1168,11 @@ a {
   margin-right: 10px;
 }
 .coll__item:hover{
-  border:1px solid #4ebef6;
+  border:1px solid #2a499d;
   cursor: pointer;
 }
 .coll__item:hover .coll__item__header{
-  border-bottom:1px solid #4ebef6;
+  border-bottom:1px solid #2a499d;
 }
 
 
@@ -1247,7 +1247,7 @@ a {
   display: inline-block;
   border-radius:5px;
   width: 60%;
-  color: #4ebef6;
+  color: #2a499d;
   font-size: 14px;
   background-color: #fff;
 }
