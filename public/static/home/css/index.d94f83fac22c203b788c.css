@@ -1764,15 +1764,16 @@ input:-ms-input-placeholder{
 
 
 .swiper-container .slide1 {
-    background: url(../img/banner.b93dbee6.png) no-repeat center center;
+    background: url(../img/banner.b93dbee6.png)  center center / cover no-repeat; width: 1265px;;
 }
 
 .swiper-container .slide2 {
-    background: url(../img/banner.78d804d8.png) no-repeat center center;
+    background: url(../img/banner.78d804d8.png)  center center / cover no-repeat; width: 1265px;;
 }
 .swiper-container .slide3 {
-    background: url(../img/banner.540791e3.png) no-repeat center;
+    background: url(../img/banner.540791e3.png)  center center / cover no-repeat; width: 1265px;;
 }
 .swiper-container .slide4 {
-    background: url(../img/banner.6b2eb4d1.png) no-repeat center;
+    background: url(../img/banner.6b2eb4d1.png)  center center / cover no-repeat; width: 1265px;;
 }
+

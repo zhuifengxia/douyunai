@@ -61,6 +61,7 @@ Route::group('/',[
     'contact'=>['index/Index/contact',['method' => 'get']],
     'newdetail/:id'=>['index/Index/newsdetails',['method' => 'get']],
     'joinapply'=>['index/Index/joinapply',['method' => 'post']],
+    'usertest'=>['index/Index/usertest',['method' => 'post']],
 ]);
 
 return [

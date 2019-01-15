@@ -15,5 +15,179 @@
         </div>
     </div>
 </div>
+
+
+<div class="popup pra" id="freetrydiv" style="display: none;">
+    <div class="participate">
+        <i class="off"></i>
+        <div class="partext">
+            <h5>获取免费体验资格</h5>
+            <div class="form">
+                <s>*</s>
+                <span>姓名</span>
+                <input type="text" id="test_name" placeholder="请填写您的姓名" class="name txt">
+            </div>
+            <div class="form">
+                <s>*</s>
+                <span>电话</span>
+                <input type="text" id="test_tel" placeholder="请填写您的电话" class="tel txt">
+            </div>
+            <div class="form">
+                <s></s>
+                <span>备注</span>
+                <input type="text" id="test_remark" placeholder="请填写您的备注" class="profession txt">
+            </div>
+            <p class="error"></p>
+            <div class="form btnform">
+                <input type="button" value="提交" class="btn" onclick="submit_test()" style="background: #4ebef6;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup pra" id="jointrydiv" style="display: none;">
+    <div class="participate">
+        <i class="off"></i>
+        <div class="partext">
+            <h5>立即加盟抖云</h5>
+            <div class="form">
+                <s>*</s>
+                <span>姓名</span>
+                <input type="text" id="name" placeholder="请填写您的姓名" class="name txt">
+            </div>
+            <div class="form">
+                <s>*</s>
+                <span>电话</span>
+                <input type="text" id="telNumber" placeholder="请填写您的电话" class="tel txt">
+            </div>
+            <div class="form">
+                <s>*</s>
+                <span>公司名称</span>
+                <input type="text" id="company" placeholder="请填写公司" class="profession txt">
+            </div>
+            <div class="form">
+                <s>*</s>
+                <span>省份</span>
+                <input type="text" id="area" placeholder="请填写省份" class="profession txt">
+            </div>
+            <p class="error"></p>
+            <div class="form btnform">
+                <input type="button" value="提交" class="btn" onclick="submit_join()" style="background: #4ebef6;">
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.freetrya').click(function(){
+        $("#freetrydiv").show();
+    })
+    $(".off").click(function(){
+        $("#freetrydiv").hide();
+        $("#jointrydiv").hide();
+        $("#test_name").val("");
+        $("#test_tel").val("");
+        $("#test_remark").val("");
+        $("#area").val("");
+        $("#company").val("");
+        $("#telNumber").val("");
+        $("#name").val("");
+        $(".error").html("");
+    })
+
+    $('.jointrya').click(function () {
+        $("#jointrydiv").show();
+    })
+
+    //提交免费试用
+    function submit_test() {
+        $(".error").html("");
+        var test_name=$("#test_name").val();
+        var test_tel=$("#test_tel").val();
+        var test_remark=$("#test_remark").val();
+        if(test_name==""){
+            $(".error").html("请输入姓名");
+            return false;
+        }
+        if(test_tel==""){
+            $(".error").html("请输入手机号");
+            return false;
+        }
+        if(test_tel==""){
+            $(".error").html("请输入手机号");
+            return false;
+        }
+        if(!(/^1[3|4|5|6|7|8|9]\d{9}$/.test(test_tel))){
+            $(".error").html("手机号格式不正确");
+            return false;
+        }
+
+        $.ajax({
+            type: "post",
+            url: "/usertest",
+            data: "test_name="+test_name+"&test_tel="+test_tel+"&test_remark="+test_remark,
+            success: function (e) {
+                $("#freetrydiv").hide();
+                $(".popup .txt").val("")
+                $(".profession.txt").val("")
+                $(".territory").val("")
+                $(".error").html("")
+                popup({
+                    type: "success", msg: "提交成功，我们将于一个工作日内联系您", delay: 1000, callBack: function () {
+                        console.log("callBack~~~")
+                    }
+                })
+            }
+        })
+    }
+
+    //提交加盟
+    function submit_join() {
+        $(".error").html("");
+        var area=$("#area").val();
+        var company=$("#company").val();
+        var telNumber=$("#telNumber").val();
+        var name=$("#name").val();
+        if(name==""){
+            $(".error").html("请输入姓名");
+            return false;
+        }
+        if(area==""){
+            $(".error").html("请输入省份");
+            return false;
+        }
+        if(company==""){
+            $(".error").html("请输入公司名称");
+            return false;
+        }
+        if(telNumber==""){
+            $(".error").html("请输入手机号");
+            return false;
+        }
+        if(!(/^1[3|4|5|6|7|8|9]\d{9}$/.test(telNumber))){
+            $(".error").html("手机号格式不正确");
+            return false;
+        }
+
+        $.ajax({
+            type: "post",
+            url: "/joinapply",
+            data: "name="+name+"&area="+area+"&company="+company+"&telNumber="+telNumber,
+            success: function (e) {
+                $("#jointrydiv").hide();
+                $("#area").val("");
+                $("#company").val("");
+                $("#telNumber").val("");
+                $("#name").val("");
+                $(".error").html("");
+                popup({
+                    type: "success", msg: "提交成功，我们将于一个工作日内联系您", delay: 1000, callBack: function () {
+                        console.log("callBack~~~")
+                    }
+                })
+            }
+        })
+    }
+
+</script>
 </body>
 </html>

@@ -107,4 +107,26 @@ class Index extends Controller
         return json($returnarr);
     }
 
+    //用户免费体验
+    public function usertest()
+    {
+        $test_name = input('test_name');
+        $test_tel = input('test_tel');
+        $test_remark = input('test_remark');
+        $data = array(
+            'user_name' => $test_name,
+            'user_phone' => $test_tel,
+            'data_remark' => $test_remark,
+            'create_time' => time(),
+            'data_type'=>1
+        );
+        Db::table('douyun_experience')
+            ->insert($data);
+        $returnarr = array(
+            'code' => 0,
+            'message' => 'ok'
+        );
+        return json($returnarr);
+    }
+
 }
