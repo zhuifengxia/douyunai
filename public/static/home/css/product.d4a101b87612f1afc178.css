@@ -1402,7 +1402,7 @@ a {
 .t-text{font-size: 30px;color:#32c887;}
 .mt30{margin: 100px 0 10px 0;}
 .t-mianCon{width:80%}
-.t-mainsku{width:20%;float: left;overflow: hidden;position: relative;
+.t-mainsku{width:25%;float: left;overflow: hidden;position: relative;
     transition: width .3s, height .3s ,opacity .3s;
     height: 330px;text-align: center;
 }
