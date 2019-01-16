@@ -1133,7 +1133,7 @@ a {
 /** 合作 **/
 .coll{
   padding-bottom:106px;
-    background-color: white;
+    background-color: #d7f2fe;
     /*background: url(../img/banner.540791e3.png) 0 0 no-repeat;;*/
 }
 .coll__content{
@@ -1144,14 +1144,14 @@ a {
 .coll__item{
   margin-bottom: 30px;
   height: 12.5rem;
-  border: 1px solid #2a499d;
+  border: 1px solid white;
   padding: 3.125rem;
-    color:#fd8105;
+    color:white;
   box-sizing:border-box;
 }
 .coll__item__header{
   font-size: 1.5rem;
-  border-bottom: 1px solid #2a499d;
+  border-bottom: 1px solid white;
   padding-bottom: 1rem;
 }
 .coll__item__content{
@@ -1163,16 +1163,16 @@ a {
   width: 4px;
   height: 4px;
   border-radius: 2px;
-  background-color: #fd8105;
+  background-color: white;
   margin-bottom: 5px;
   margin-right: 10px;
 }
 .coll__item:hover{
-  border:1px solid #2a90fc;
+  border:1px solid #2a499d;
   cursor: pointer;
 }
 .coll__item:hover .coll__item__header{
-  border-bottom:1px solid #2a90fc;
+  border-bottom:1px solid #2a499d;
 }
 
 
