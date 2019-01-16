@@ -560,7 +560,7 @@ input:-ms-input-placeholder{
     margin-top: -50px;
     text-align: center;
     border-bottom:1px solid #bcc5cc;
-    width: 80%;
+    width: 1200px;
     margin:0 auto;
 }
 .tab{
@@ -835,7 +835,7 @@ input:-ms-input-placeholder{
 	}
 	.container {
 		margin:0 auto;
-	    width: 80%;
+	    width: 1200px;
 	}
 	.news__item:last-child{
 		display: block;
@@ -855,7 +855,7 @@ input:-ms-input-placeholder{
 	}
 	.container {
 		margin:0 auto;
-        width: 80%;
+        width: 1200px;
 	}
 	.news__item:last-child{
 		display: block;
@@ -941,7 +941,7 @@ input:-ms-input-placeholder{
 
 .detail-outer-item .detail-nav-outer {
 
-    width: 1000px;
+    width: 1200px;
 
     margin: auto;
 
@@ -957,9 +957,7 @@ input:-ms-input-placeholder{
 
     margin: 80px auto 0;
 
-    padding: 0 0 0 20px;
-
-    width: 1360px
+    width: 1200px
 
 }
 
@@ -983,8 +981,8 @@ input:-ms-input-placeholder{
 
 .detail-outer-item ul.detail-nav>li {
 
-    width: 205px;
-
+    /*width: 205px;*/
+    width: 23.7%;
     height: 355px;
 
     box-sizing: border-box;
