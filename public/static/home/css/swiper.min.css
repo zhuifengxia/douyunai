@@ -282,7 +282,7 @@
     width: 30px;
     height: 5px;
     display: inline-block;
-    background: #000;
+    background: #cecfd2;
     opacity: .2
 }
 
@@ -303,7 +303,7 @@ button.swiper-pagination-bullet {
 
 .swiper-pagination-bullet-active {
     opacity: 1;
-    background: #2a499d
+    background: white
 }
 
 .swiper-container-vertical > .swiper-pagination-bullets {
