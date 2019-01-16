@@ -193,13 +193,13 @@ html,body{
 @media (min-width: 1200px){
     .header__nav{
 		margin: 0 auto;
-		width:1170px;
+		width:98%;
 	}
 }
 
 .footer{
 	background: url(../img/footer-bg.7175e2c7.png) center center repeat;
-    color:white;
+    color:#a3b1bf;
     font-size:14px;
     background-size: contain;
 }

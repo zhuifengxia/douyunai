@@ -216,7 +216,7 @@ html, body {
 @media (min-width: 1200px) {
     .header__nav {
         margin: 0 auto;
-        width: 1170px;
+        width: 98%;
     }
 }
 
@@ -956,7 +956,7 @@ ul.footer__item li {
 }
 
 .trade-box {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     position: relative;
     transition: all .3s ease;

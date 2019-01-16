@@ -193,7 +193,7 @@ html,body{
 @media (min-width: 1200px){
     .header__nav{
 		margin: 0 auto;
-		width:1170px;
+		width:98%;
 	}
 }
 

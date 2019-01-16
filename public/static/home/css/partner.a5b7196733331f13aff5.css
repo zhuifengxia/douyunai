@@ -193,7 +193,7 @@ html,body{
 @media (min-width: 1200px){
     .header__nav{
 		margin: 0 auto;
-		width:1170px;
+		width:98%;
 	}
 }
 
@@ -226,7 +226,7 @@ html,body{
 ul.footer__item li {
 	display: block;
     list-style: none;
-    padding: 10px 0;
+    padding: 1px 0;
 }
 
 .flink a{
@@ -1133,7 +1133,7 @@ a {
 /** 合作 **/
 .coll{
   padding-bottom:106px;
-    background-color: #d2d2d2;
+    background-color: #d7f2fe;
     /*background: url(../img/banner.540791e3.png) 0 0 no-repeat;;*/
 }
 .coll__content{
@@ -1256,7 +1256,7 @@ a {
   box-shadow: 2px 2px 2px #ccc;
 }
 input::-webkit-input-placeholder{
-  color:#fff;
+  color:#dedede;
 }
 input::-moz-placeholder{
   color:#fff;
