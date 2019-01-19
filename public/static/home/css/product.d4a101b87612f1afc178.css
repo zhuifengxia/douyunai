@@ -1536,3 +1536,73 @@ a {
     border-radius: 50%;
     margin-right: 15px;
 }
+
+
+.Usethescene {
+    padding: 50px 0 40px 0;
+    box-sizing: border-box;
+    background: #2a499d;
+}
+
+.user {
+    width: 1030px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.cradvantage_h3 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 11px;
+    text-align: center;
+}
+.crsolid1 {
+    width: 80px;
+    height: 4px;
+    background: #fff;
+    margin: 0 auto;
+    margin-bottom: 55px;
+}
+.Usethescene .imgblock {
+    width: 190px;
+    height: 190px;
+    background: #fff;
+    color: #666;
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0px 15px 15px 0;
+    cursor: pointer;
+    transition: 0.4s;
+    position: relative;
+    top: 0;
+    float: left;
+}
+.Usethescene .imgblock dt img {
+    display: block;
+    margin: 0 auto;
+    padding: 34px 0;
+}
+
+.Usethescene .imgblock1 {
+    width: 190px;
+    height: 190px;
+    background: url(../img/applicationBorder.png) no-repeat center;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0px 15px 15px 0;
+    cursor: pointer;
+    transition: 0.4s;
+    position: relative;
+    top: 0;
+    float: left;
+}
+.UsethesceneContent dd {
+    font-size: 18px;
+}
+.Usethescene .imgblock:hover{
+    top:-15px;
+    background: url(../img/applicationBorder.png) no-repeat center;
+    color:#fff;
+}
