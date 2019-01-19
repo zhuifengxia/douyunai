@@ -216,7 +216,7 @@ html, body {
 @media (min-width: 1200px) {
     .header__nav {
         margin: 0 auto;
-        width: 98%;
+        width: 1300px;
     }
 }
 
@@ -937,7 +937,7 @@ ul.footer__item li {
     left: 50%;
     transform: translateX(-50%);
     border: 6px solid;
-    border-color: #20B09F transparent transparent;
+    border-color: #2a499d transparent transparent;
 }
 
 .trade-title:after {
@@ -1497,4 +1497,42 @@ a {
     .skuShow .sku-mr{
         padding:0;
     }
+}
+
+
+.awt-a {
+    background-color: #f6f6f6;
+    margin: 0 auto;
+    padding: 0px;
+}
+.w-1200 {
+    height: 410px;
+    background: url(../img/ai-2.jpg) no-repeat right;
+    width: 1200px;
+    margin: 0 auto;
+}
+.awt-a dl {
+    padding-top: 85px;
+}
+.awt-a dt {
+    color: #434343;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+.awt-a dd {
+    color: #434343;
+    font-size: 24px;
+}
+.awt-a dd span {
+    color: #fff;
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    display: inline-block;
+    background-color: #818181;
+    border-radius: 50%;
+    margin-right: 15px;
 }

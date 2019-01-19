@@ -193,7 +193,7 @@ html,body{
 @media (min-width: 1200px){
     .header__nav{
 		margin: 0 auto;
-		width:98%;
+		width:1300px;
 	}
 }
 
@@ -1331,4 +1331,114 @@ input:-ms-input-placeholder{
 
 
 
+.customer-case {
+    min-width: 1200px;
+    box-sizing: border-box;
+    padding: 60px 0;
+    background-color: #f3f3f3;
+    background-size: cover;
+}
+.wrap {
+    width: 1100px;
+    min-width: 1100px;
+    margin: 0 auto;
+}
+.customer-case h2 {
+    color: #333333;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+.text-center {
+    text-align: center;
+    text-align: -moz-center;
+    text-align: -webkit-center;
+}
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.customer-case .customer-case-infor {
+    margin-top: 60px;
+}
+.customer-case .customer-case-infor .customer-case-icon {
+    display: inline-block;
+    width: 350px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+.customer-case .customer-case-infor .customer-case-icon {
+    display: inline-block;
+    width: 350px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+.customer-case .customer-case-infor .customer-case-icon {
+    display: inline-block;
+    width: 350px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+.customer-case .customer-case-infor .customer-case-icon {
+    display: inline-block;
+    width: 350px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+.customer-case .customer-case-infor .customer-case-icon {
+    display: inline-block;
+    width: 350px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+.customer-case .customer-case-infor .customer-case-icon:nth-child(3), .customer-case .customer-case-infor .customer-case-icon:last-child {
+    margin-right: 0;
+}
 
+.customer-case .customer-case-infor .customer-case-icon {
+    display: inline-block;
+    width: 350px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+.service-field {
+    min-width: 1200px;
+    background: #f3f3f3;
+    padding: 75px 0;
+}
+.service-field h2 {
+    color: #333333;
+    font-size: 36px;
+    margin-bottom: 70px;
+}
+.clearfix {
+    zoom: 1;
+}
+.trial {
+    box-sizing: border-box;
+    height: 250px;
+    padding-top: 50px;
+    background: url(../img/index/index1_61.png) no-repeat center center;
+}
+.trial .wrap .trial-con {
+    margin-top: 50px;
+    width: 510px;
+    margin: auto;
+}
+
+.customer-case .customer-case-infor .customer-case-icon img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+}
