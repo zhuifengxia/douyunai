@@ -229,7 +229,7 @@ body>.topTransparentRemove .nav ul li a{
 }
 
 .top li.active {
-    border-bottom: 5px solid #0eb288;
+    border-bottom: 5px solid #0078cc;
 }
 .top li.active1 {
     border-bottom: 5px solid #FFFFFF;
@@ -245,10 +245,10 @@ body>.topTransparentRemove .nav ul li a{
 }
 
 .top .nav ul li:hover {
-    border-bottom: 5px solid #0eb288;
+    border-bottom: 5px solid #0078cc;
 }
 .top .nav ul li a:hover {
-    color:#0eb288;
+    color:#0078cc;
 }
 
 .top .nav1>ul li:hover {
@@ -495,7 +495,7 @@ body>.topTransparentRemove .nav ul li a{
 }
 .value .value-con h5{
     font-size: 18px;
-    color: #0eb288;
+    color: #0078cc;
     margin-top: 22px;
     font-weight: bolder;
 }
@@ -672,7 +672,7 @@ body>.topTransparentRemove .nav ul li a{
     box-sizing: border-box;
     height: 250px;
     padding-top: 50px;
-    background: url(../img/index1_61.png) no-repeat center center;
+    background: url(../img/banner.540791e3.png) no-repeat center center;
 }
 
 .trial .wrap h2 {
@@ -2187,7 +2187,7 @@ body>.topTransparentRemove .nav ul li a{
     width: 70px;
     display: block;
     text-align: center;
-    border-bottom: 5px solid #0eb288;
+    border-bottom: 5px solid #0078cc;
     margin-top: 10px;
 }
 .line-green1:after {
@@ -2209,11 +2209,11 @@ body>.topTransparentRemove .nav ul li a{
     margin-top: 20px;
 }
 .know-more:hover {
-    background-color: #0eb288;
+    background-color: #0078cc;
 }
 .btn-green{
     display: block;
-    background-color: #0eb288;
+    background-color: #0078cc;
 }
 .foot-logo{
     margin-top: 50px;
@@ -2225,7 +2225,7 @@ body>.topTransparentRemove .nav ul li a{
     position: fixed;
     left: 10px;
     top: 200px;
-    border: 1px solid #0eb288;
+    border: 1px solid #0078cc;
     text-align: center;
     z-index: 999;
     font-family: "Microsoft YaHei UI";
@@ -2249,7 +2249,7 @@ body>.topTransparentRemove .nav ul li a{
 	cursor: pointer;
 }
 .rightfixblock1 {
-	background: #0eb288;
+	background: #0078cc;
 	border-bottom: 1px solid #0c9874;
 	position:relative
 }
@@ -2257,7 +2257,7 @@ body>.topTransparentRemove .nav ul li a{
 	background: #0c9874;
 }
 .rightfixblock2 {
-	background: #0eb288;
+	background: #0078cc;
 }
 .rightfixblock2:hover{
 	background: #0c9874;
@@ -2342,7 +2342,7 @@ body>.topTransparentRemove .nav ul li a{
     zoom: 1;
     font-size: 16px;
     box-shadow: 0 1px 0 0 rgba(0,0,0,.06), 0 2px 0 0 rgba(0,0,0,.01);
-    background: #0eb288;
+    background: #0078cc;
     top: 0;
 }
 .pull-left {
@@ -2499,7 +2499,7 @@ body>.topTransparentRemove .nav ul li a{
 .audio-button-lxb, .audio-button-consult {
     width: 130px;
     height: 40px;
-    background: linear-gradient(#0eb288, #06eaa9);
+    background: linear-gradient(#0078cc, #06eaa9);
     text-align: center;
     line-height: 40px;
     color: #fff;
@@ -2551,7 +2551,7 @@ body>.topTransparentRemove .nav ul li a{
     float: left;
 }
 .tips_t a {
-    background: linear-gradient(#0eb288, #06eaa9);
+    background: linear-gradient(#0078cc, #06eaa9);
     width: 100px;
     height: 22px;
     display: inline-block;

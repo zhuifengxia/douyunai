@@ -58,7 +58,7 @@ html,body{
     top:50%;
     margin-top: 37px;
     right: 2px;
-    background-color: #2a499d;
+    background-color: #0078cc;
     cursor: pointer;
     display: none;
     border-radius: 5px;
@@ -169,7 +169,7 @@ html,body{
 	font-size: 16px;
 }
 .navbar a.selected{
-	border-bottom:4px solid #2a499d;
+	border-bottom:4px solid white;
 }
 .navbar a{
 	color:#fff;
@@ -301,7 +301,7 @@ ul.footer__item li {
 	cursor: pointer;
 }
 .tab.selected{
-	background-color:#2a499d;
+	background-color:#0078cc;
 }
 .tab:hover{
 	text-decoration: underline;
@@ -313,7 +313,7 @@ ul.footer__item li {
 	text-align: left;
 }
 .news__nav a{
-	color:#2a499d;
+	color:#0078cc;
 	font-size: 18px;
 	text-decoration: none;
 }
@@ -329,7 +329,7 @@ ul.footer__item li {
 	text-decoration: none;
 }
 .news__item:hover .news__title a{
-	color:#2a499d;
+	color:#0078cc;
 }
 .news__item__img{
 	width:207px;

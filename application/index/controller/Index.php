@@ -80,6 +80,11 @@ class Index extends Controller
     //合作案例
     public function coopercase()
     {
+        //读取最新的6条合作案例信息
+        $coopercase = Db::table('douyun_coopercase')
+            ->order('id desc')
+            ->limit(6);
+        $this->assign('coopercase', $coopercase);
         $this->assign('pagenum', 5);
         return $this->fetch('coopercase');
     }
