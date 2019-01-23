@@ -83,7 +83,32 @@ class Index extends Controller
         //读取最新的6条合作案例信息
         $coopercase = Db::table('douyun_coopercase')
             ->order('id desc')
-            ->limit(6);
+            ->limit(6)
+            ->select();
+        for($i=0;$i<count($coopercase);$i++) {
+            $classname = "fadeInLeft";
+            switch ($i) {
+                case 0:
+                    $classname = "fadeInLeft";
+                    break;
+                case 1:
+                    $classname = "slideInDown";
+                    break;
+                case 2:
+                    $classname = "fadeInRight";
+                    break;
+                case 3:
+                    $classname = "slideInLeft";
+                    break;
+                case 4:
+                    $classname = "fadeInUp";
+                    break;
+                case 5:
+                    $classname = "slideInRight";
+                    break;
+            }
+            $coopercase[$i]['class_name'] = $classname;
+        }
         $this->assign('coopercase', $coopercase);
         $this->assign('pagenum', 5);
         return $this->fetch('coopercase');

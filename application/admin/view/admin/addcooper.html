@@ -1,0 +1,82 @@
+
+<!-- jQuery 2.1.4 -->
+{js href="/static/admin/plugins/jQuery/jquery-1.9.1.min.js" /}
+
+
+<style>
+    .frame {
+        width: 200px;
+        height: 30px;
+        border: none;
+        vertical-align: middle;
+    }
+    .file{
+        position: absolute;
+        filter: alpha(opacity:0);
+        opacity: 0;
+        width: 70px;
+        height:40px;
+    }
+    .coverfile{
+        right: 48%;
+        top: 45%;
+    }
+</style>
+<div class="panel-heading">{$cooperdetail.id?"编辑":"添加"}合作案例</div>
+<div class="panel-body">
+    <form action="/admin/cooper/doAddCooper" method="POST" enctype="multipart/form-data" name="newsimgform">
+        <div class="box-body">
+            <div class="form-group">
+                <label>合作公司名称</label>
+                <input type="hidden" name="id" value="{$cooperdetail.id}"/>
+                <input type="text" id="coopername" name="coopername" value="{$cooperdetail.cooper_name}" class="form-control" placeholder="请输入合作公司名称">
+            </div>
+
+
+            <div class="form-group" style="clear:both;padding-top:20px;">
+                <label>合作公司LOGO(<font color="red">尺寸:122px*123px</font>)</label>
+                    <div>
+                        <input type="text" class="form-control" name="cooperimg" id="newsimg" style="float:left;width:400px;" value="{$cooperdetail.cooper_img}" />
+                        <input type="button" class="btn btn-primary" value="浏览...">
+                        <input type="file" name="logofile" class="file coverfile" size="28" onchange="document.getElementById('newsimg').value=this.value">
+                        <input type="button" name="coverimgupload" id="coverimgupload" class="btn btn-primary" style="margin-left: 30px;" value="上传">
+                        <iframe id="coverframe" name="coverframe"  class="frame"></iframe>
+                    </div>
+            </div>
+
+
+            <div class="form-group">
+                <label style="display: block;">合作介绍</label>
+                <textarea id="coopermsg" name="coopermsg" class="form-control">{$cooperdetail.cooper_msg}</textarea>
+            </div>
+
+
+
+            <div class="form-group">
+                <button type="submit" id="newssave" class="btn btn-primary">确认保存</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+
+    //资讯封面图上传
+    $('#coverimgupload').click(function(){
+        document.newsimgform.action="/admin/uploadfiles";
+        document.newsimgform.target="coverframe";
+        document.newsimgform.submit();
+    });
+    $('#newssave').click(function(){
+        var newsimg=$("#newsimg").val();
+        var coopermsg=$("#coopermsg").val();
+        if(newsimg==""||coopermsg=="")
+        {
+            alert("合作logo或介绍不能为空");
+            return false;
+        }
+        document.newsimgform.action="/admin/cooper/doAddCooper";
+        document.newsimgform.target="";
+        document.newsimgform.submit();
+    });
+</script>

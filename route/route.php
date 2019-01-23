@@ -43,6 +43,13 @@ Route::group('admin',[
     //删除新闻
     'news/delete/:id'=>['admin/Admin/delNews',['method' => 'get']],
 
+    //合作案例管理
+    'cooper/list'=>['admin/Admin/Cooperlist',['method' => 'get']],
+    //添加合作案例
+    'cooper/add/[:id]'=>['admin/Admin/addCooper',['method' => 'get']],
+    //合作案例保存
+    'cooper/doAddCooper'=>['admin/Admin/doAddCooper',['method' => 'post']],
+
     //上传图片
     'uploadfiles'=>['admin/Admin/uploadFiles',['method' => 'post|get']],
 ]);

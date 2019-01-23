@@ -42,30 +42,13 @@
     <div class="wrap">
         <h2 class="text-center line-green animated fadeInDown">客户案例</h2>
         <div class="customer-case-infor">
-            <div class="customer-case-icon animated fadeInLeft">
-                <img src="../static/home/img/index3_43.png" alt="">
-                <span>作为一家专业提供保险经纪服务的公司,选择跃讯客服云呼叫后,让我们 可以成功应对大量客户的咨询</span>
+
+            {foreach name='coopercase' item='item' key='k'}
+            <div class="customer-case-icon animated {$item.class_name}" style="{$k>2?'margin-top:63px;':''}">
+                <img src="{$item.cooper_img}" alt="">
+                <span>{$item.cooper_msg}</span>
             </div>
-            <div class="customer-case-icon animated slideInDown">
-                <img src="../static/home/img/index3_45.png" alt="">
-                <span>为客户提供优质服务是我们的使命.选择了跃讯云客服呼叫中心后,客户 好评率不断增多,期待未来再创佳绩</span>
-            </div>
-            <div class="customer-case-icon animated fadeInRight">
-                <img src="../static/home/img/index3_48.png" alt="">
-                <span>我们致力于通过信息化管理,提高客 户设计选型的效率.选择跃讯云客服 后,不管是从何种渠道来的咨询,客服部门都能快速反应</span>
-            </div>
-            <div class="customer-case-icon animated customer1 slideInLeft" style="margin-top:63px;">
-                <img src="../static/home/img/index3_50.png" alt="">
-                <span>我们的宗旨是为用户提供五星级的家,智小七机器人帮助我们为用户提供五星级的服务</span>
-            </div>
-            <div class="customer-case-icon animated customer2 fadeInUp" style="margin-top:63px;">
-                <img src="../static/home/img/index3_52.png" alt="">
-                <span>雇佣智小七电话机器人后,减少了企 业运营成本的同时,电销部门业绩也在快速增长,一举多得</span>
-            </div>
-            <div class="customer-case-icon animated customer3 slideInRight" style="margin-top:63px;">
-                <img src="../static/home/img/index3_54.png" alt="">
-                <span>作为一家软件提供商,我们密切关注 着SaaS模式的发展,跃讯云客服帮助我们为客户提供全生命周期的服务</span>
-            </div>
+            {/foreach}
         </div>
     </div>
 </div>

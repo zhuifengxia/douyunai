@@ -6,6 +6,7 @@
  * 版权：刘单风个人所有
  */
 namespace app\admin\controller;
+use app\model\Coopercase;
 use app\model\Experience;
 use app\model\Joins;
 use app\model\Luckprizes;
@@ -15,7 +16,6 @@ use app\model\Util;
 use think\Controller;
 use think\Hook;
 use think\facade\Env;
-use think\facade\Config;
 
 class Admin extends Controller
 {
@@ -193,6 +193,68 @@ class Admin extends Controller
     }
 
 
+    /**
+     * 合作案例列表数据
+     */
+    public function Cooperlist()
+    {
+        $this->view->engine->layout('layouts/admin');
+        $cooperModel=new Coopercase();
+        $data=$cooperModel->dataList();
+        $this->assign('cooperlist', $data);
+        return $this->fetch('cooper_list');
+    }
+
+    /**
+     * 添加/编辑合作案例
+     * @param int $id
+     */
+    public function addCooper($id=0)
+    {
+        $this->view->engine->layout('layouts/admin');
+        $cooperModel=new Coopercase();
+        if ($id) {
+            $cooper = $cooperModel->oneDetail(["id" => $id]);
+        }else{
+            $cooper=$cooperModel->Coopercase();
+        }
+        $this->assign("cooperdetail", $cooper);
+        return $this->fetch('addcooper');
+    }
+
+    /**
+     * 合作案例保存
+     */
+    public function doAddCooper()
+    {
+        $cooperModel = new Coopercase();
+        //查询是否存在
+        $where = [
+            'cooper_name' => $_POST['coopername']
+        ];
+        if ($_POST['id']) {
+            $where['id'] = "!=" . $_POST['id'];
+        }
+        $data = $cooperModel->oneDetail($where);
+        if ($data) {
+            $this->error('该合作案例已经存在，请重新输入', '/admin/cooper/add');
+        } else {
+            $insrtdata = [
+                'cooper_name' => $_POST['coopername'],
+                'cooper_img' => $_POST['cooperimg'],
+                'cooper_msg' => $_POST['coopermsg']
+            ];
+            if ($_POST['id']) {
+                $cooperModel->updateOne($insrtdata, ['id' => $_POST['id']]);
+            } else {
+                $cooperModel->addOne($insrtdata);
+            }
+            $this->success('保存成功', '/admin/cooper/list');
+        }
+
+    }
+
+
     //上传文件
     public function uploadFiles()
     {
@@ -209,25 +271,6 @@ class Admin extends Controller
 
 
         exit();
-    }
-
-    //阿里云删除图片
-    public function delPic($imgname)
-    {
-        $alioss = Config::get('app.alioss');
-        $accessKeyId = $alioss['accesskey'];
-        $accessKeySecret = $alioss['accesskeysecret'];
-        $endpoint = $alioss['endpoint'];
-        // 存储空间名称
-        $bucket = $alioss['bucket'];
-        // 文件名称
-        $object = "luckprizeimgs" . $imgname;
-        try {
-            $ossClient = new OssClient($accessKeyId, $accessKeySecret, $endpoint);
-            $ossClient->deleteObject($bucket, $object);
-        } catch (OssException $e) {
-            //文件删除失败
-        }
     }
 
 
