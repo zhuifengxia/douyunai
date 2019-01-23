@@ -672,7 +672,8 @@ body>.topTransparentRemove .nav ul li a{
     box-sizing: border-box;
     height: 250px;
     padding-top: 50px;
-    background: url(../img/banner.540791e3.png) no-repeat center center;
+    background-color:#0078cc ;
+    /*background: url(../img/banner.540791e3.png) no-repeat center center;*/
 }
 
 .trial .wrap h2 {
