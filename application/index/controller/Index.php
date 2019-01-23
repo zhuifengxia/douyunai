@@ -72,6 +72,11 @@ class Index extends Controller
         $newsdetail=Db::table('douyun_news')
             ->where('id',$id)
             ->find();
+        //增加浏览量
+        Db::table('douyun_news')
+            ->where('id',$id)
+            ->inc('read_num')
+            ->update();
         $this->assign('news_details', $newsdetail);
         $this->assign('pagenum', 3);
         return $this->fetch('news_details');

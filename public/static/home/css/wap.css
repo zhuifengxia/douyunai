@@ -709,6 +709,7 @@ body>.topTransparentRemove .nav ul li a{
     float: left;
 	padding-left:5px;
 	border:1px solid #fff;
+    color:white;
 }
 
 .trial .wrap .trial-con .btn-green{
