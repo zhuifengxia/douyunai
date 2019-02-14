@@ -23,68 +23,14 @@
             {/foreach}
         </div>
         <div class="news__btn">
-            {$newslist->render()}
-        </div>
-    </div>
-    <div id="js_company" class="news__list hidden">
-        <div class="news__content">
-            {foreach $newslist as $item}
-            <div class="news__item">
-                <div class="news__item__img"><img
-                        src="..{$item.news_img}"></div>
-                <div class="new__item__body">
-                    <p class="news__title">
-                        <a target="_blank" href="newdetail/{$item.id}">{$item.news_title}</a>
-                    </p>
-                    <p class="news__desc">{$item.news_msg|mb_substr=0,150,'utf-8'} ... </p>
-                    <p class="news__date">{$item.create_time|date="Y-m-d H:i:s"}</p></div>
+            <div class="col-sm-7" style="margin:0 auto;width: 98%">
+                {php}echo trim($newslist->render(),'"');{/php}
             </div>
-            {/foreach}
-        </div>
-        <div class="news__btn">
-            {$newslist->render()}
-        </div>
-    </div>
-    <div id="js_hot" class="news__list hidden">
-        <div class="news__content">
-            {foreach $newslist as $item}
-            <div class="news__item">
-                <div class="news__item__img"><img
-                        src="..{$item.news_img}"></div>
-                <div class="new__item__body">
-                    <p class="news__title">
-                        <a target="_blank" href="newdetail/{$item.id}">{$item.news_title}</a>
-                    </p>
-                    <p class="news__desc">{$item.news_msg|mb_substr=0,150,'utf-8'} ... </p>
-                    <p class="news__date">{$item.create_time|date="Y-m-d H:i:s"}</p></div>
-            </div>
-            {/foreach}
-        </div>
-        <div class="news__btn">
-            {$newslist->render()}
         </div>
     </div>
 </div>
 
 <script>
-
-    $(function () {
-        var datatype = {$datatype?:0};
-        if(datatype==0){
-            $("#js_news").removeClass("hidden");
-            $("#js_company").addClass("hidden");
-            $("#js_hot").addClass("hidden");
-        }else if (datatype==1){
-            $("#js_news").addClass("hidden");
-            $("#js_company").removeClass("hidden");
-            $("#js_hot").addClass("hidden");
-        }else{
-            $("#js_news").addClass("hidden");
-            $("#js_company").addClass("hidden");
-            $("#js_hot").removeClass("hidden");
-        }
-    })
-
     function tabchange(datatype) {
         window.location.href="/news/"+datatype;
     }
