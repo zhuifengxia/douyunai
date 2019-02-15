@@ -1,15 +1,150 @@
 
-<div class="swiper-container swiper-container-horizontal">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide slide1" data-swiper-slide-index="0"></div>
-        <div class="swiper-slide slide2 swiper-slide-prev" data-swiper-slide-index="1"></div>
-        <div class="swiper-slide slide3 swiper-slide-active" data-swiper-slide-index="2"></div>
-        <div class="swiper-slide slide4 swiper-slide-next" data-swiper-slide-index="3"></div>
+<!--<div class="swiper-container swiper-container-horizontal">-->
+    <!--<div class="swiper-wrapper">-->
+        <!--<div class="swiper-slide slide1" data-swiper-slide-index="0"></div>-->
+        <!--<div class="swiper-slide slide2 swiper-slide-prev" data-swiper-slide-index="1"></div>-->
+        <!--<div class="swiper-slide slide3 swiper-slide-active" data-swiper-slide-index="2"></div>-->
+        <!--<div class="swiper-slide slide4 swiper-slide-next" data-swiper-slide-index="3"></div>-->
+    <!--</div>-->
+    <!--<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">-->
+    <!--</div>-->
+
+<!--</div>-->
+
+
+
+
+<div class="banner-engine">
+    <ul class="banner-ul clearfix" id="slider-back">
+        <li class="banner-cloudapp" style="opacity: 1;"></li>
+        <li class="banner-cps" style="opacity: 0;"></li>
+        <li class="banner-trust" style="opacity: 0;"></li>
+        <li class="banner-trust2" style="opacity: 0;"></li>
+    </ul>
+    <!-- 对应banner文字 -->
+    <div class="slider-main">
+        <div class="banner-text" style="display: block;">
+            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0" style="display: block; opacity: 1; top: 0px; left: 0px;">
+                <p class="banner-text1">精准锁定大量意向客户</p>
+                <p class=" banner-text1">助力企业业绩腾飞</p>
+                <p class=" banner-text2">抖云电话机器人 识别率高达95%</p>
+                <!--<a class="banner-link-button" href="http://www.17sucai.com/preview/1160620/2018-06-11/banner/index.html#">参与公测</a>-->
+            </div>
+        </div>
+        <div class="banner-text" style="display: none;">
+            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0" style="display: block; opacity: 1; top: 0px; left: 0px;">
+                <p class="banner-text1" style="margin:0 auto;">抖云科技</p>
+            </div>
+        </div>
+        <div class="banner-text" style="display: none;">
+            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0" style="display: block; opacity: 1; top: 0px; left: 0px;">
+
+            </div>
+        </div>
+        <div class="banner-text" style="display: none;">
+            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0" style="display: block; opacity: 1; top: 0px; left: 0px;">
+
+            </div>
+        </div>
     </div>
-    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+    <!-- banner索引 -->
+    <div class="banner-point">
+        <div class="auto">
+            <ul class="banner-area" id="slider-btn">
+                <li class="active" data-delay="12000"></li>
+                <li data-delay="8000" class=""></li>
+                <li data-delay="8000" class=""></li>
+                <li data-delay="8000" class=""></li>
+            </ul>
+        </div>
     </div>
 
 </div>
+
+<!--{js href="/static/home/js/jquery.min.js" /}-->
+<script type="text/javascript">
+    $(function() {
+        var d = $("#slider-btn li");
+        var j = $("#slider-back li");
+        var a = $(".banner-text");
+        var h = $(".slider-text");
+        var e = $(".banner-txt a");
+        var i = 0;
+        d.each(function(l) {
+            $(this).mouseover(function() {
+                f(l)
+            });
+            $(this).data("index")
+        });
+        function f(l) {
+            i = l;
+            d.eq(l).addClass("active").siblings().removeClass();
+            var m = a.eq(l);
+            var n = m.children();
+            m.siblings(".banner-text").stop(true).fadeOut(100);
+            m.show();
+            n.each(function() {
+                var o = $(this);
+                o.css({
+                    display: "block",
+                    opacity: 0,
+                    top: o.data("start_top") || 0,
+                    left: o.data("start_left") || 0
+                });
+                o.stop(true).delay(400).animate({
+                            display: "none",
+                            opacity: 1,
+                            top: o.data("to_top"),
+                            left: o.data("to_left")
+                        },
+                        1200);
+                if (o.data("class") !== undefined) {
+                    o.removeClass(o.data("class"));
+                    setTimeout(function() {
+                                o.addClass(o.data("class"))
+                            },
+                            0)
+                }
+            });
+            j.eq(l).siblings().stop().animate({
+                        opacity: 0
+                    },
+                    600);
+            j.eq(l).stop().animate({
+                        opacity: 1
+                    },
+                    600)
+        }
+        function g() {
+            i++;
+            if (i == d.length) {
+                i = 0
+            }
+            f(i)
+        }
+        var c = null;
+        var b = $("#slider-btn");
+        var k = function() {
+            var l = b.find(".active");
+            c = setTimeout(function() {
+                        g();
+                        k()
+                    },
+                    l.data("delay") || 8000)
+        };
+        k();
+        d.hover(function() {
+                    clearInterval(c)
+                },
+                function() {
+                    k()
+                });
+        f(0)
+    });
+</script>
+
+
+
 
 
 <div style="margin-bottom: 28px;margin-top: 23px;">
