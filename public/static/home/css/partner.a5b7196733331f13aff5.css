@@ -1072,7 +1072,11 @@ a {
   overflow: hidden;
 }
 .policy_column:hover .policy_column_top{
-  border-bottom:1px solid #0078cc;
+    background-color:#0078cc ;
+    border:0;
+}
+.policy_column:hover .policy_column_bottom{
+    border:2px solid #0078cc;
 }
 .policy_column:last-child{
   border-right:none;
@@ -1133,8 +1137,8 @@ a {
 /** 合作 **/
 .coll{
   padding-bottom:106px;
-    /*background-color: white;*/
-    background: url(../img/about.659e6d82.png) 0 0 no-repeat;
+    background-color: #0093d9;
+    /*background: url(../img/about.659e6d82.png) 0 0 no-repeat;*/
     -webkit-background-size:300%;
     background-size:300%;
 }
@@ -1146,14 +1150,14 @@ a {
 .coll__item{
   margin-bottom: 30px;
   height: 12.5rem;
-  border: 1px solid #0078cc;
+  border: 1px solid white;
   padding: 3.125rem;
-    color:#fd8105;
+    color:white;
   box-sizing:border-box;
 }
 .coll__item__header{
   font-size: 1.5rem;
-  border-bottom: 1px solid #0078cc;
+  border-bottom: 1px solid white;
   padding-bottom: 1rem;
 }
 .coll__item__content{
@@ -1165,16 +1169,16 @@ a {
   width: 4px;
   height: 4px;
   border-radius: 2px;
-  background-color: #fd8105;
+  background-color: white;
   margin-bottom: 5px;
   margin-right: 10px;
 }
 .coll__item:hover{
-  border:1px solid #2a90fc;
+  border:2px solid white;
   cursor: pointer;
 }
 .coll__item:hover .coll__item__header{
-  border-bottom:1px solid #2a90fc;
+  border-bottom:2px solid white;
 }
 
 
