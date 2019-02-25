@@ -1924,10 +1924,8 @@ input:-ms-input-placeholder {
 .shop{
     display: block;
     list-style-type: disc;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
+    width: 1200px;
+    margin: 0 auto;
 }
 
 .shop>li {
