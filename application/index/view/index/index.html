@@ -1,17 +1,14 @@
-
 <!--<div class="swiper-container swiper-container-horizontal">-->
-    <!--<div class="swiper-wrapper">-->
-        <!--<div class="swiper-slide slide1" data-swiper-slide-index="0"></div>-->
-        <!--<div class="swiper-slide slide2 swiper-slide-prev" data-swiper-slide-index="1"></div>-->
-        <!--<div class="swiper-slide slide3 swiper-slide-active" data-swiper-slide-index="2"></div>-->
-        <!--<div class="swiper-slide slide4 swiper-slide-next" data-swiper-slide-index="3"></div>-->
-    <!--</div>-->
-    <!--<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">-->
-    <!--</div>-->
-
+<!--<div class="swiper-wrapper">-->
+<!--<div class="swiper-slide slide1" data-swiper-slide-index="0"></div>-->
+<!--<div class="swiper-slide slide2 swiper-slide-prev" data-swiper-slide-index="1"></div>-->
+<!--<div class="swiper-slide slide3 swiper-slide-active" data-swiper-slide-index="2"></div>-->
+<!--<div class="swiper-slide slide4 swiper-slide-next" data-swiper-slide-index="3"></div>-->
+<!--</div>-->
+<!--<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">-->
 <!--</div>-->
 
-
+<!--</div>-->
 
 
 <div class="banner-engine">
@@ -24,7 +21,8 @@
     <!-- 对应banner文字 -->
     <div class="slider-main">
         <div class="banner-text" style="display: block;">
-            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0" style="display: block; opacity: 1; top: 0px; left: 0px;">
+            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0"
+                 style="display: block; opacity: 1; top: 0px; left: 0px;">
                 <p class="banner-text1">精准锁定大量意向客户</p>
                 <p class=" banner-text1">助力企业业绩腾飞</p>
                 <p class=" banner-text2">抖云电话机器人 识别率高达95%</p>
@@ -32,17 +30,20 @@
             </div>
         </div>
         <div class="banner-text" style="display: none;">
-            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0" style="display: block; opacity: 1; top: 0px; left: 0px;">
+            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0"
+                 style="display: block; opacity: 1; top: 0px; left: 0px;">
                 <p class="banner-text1" style="margin:0 auto;">抖云科技</p>
             </div>
         </div>
         <div class="banner-text" style="display: none;">
-            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0" style="display: block; opacity: 1; top: 0px; left: 0px;">
+            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0"
+                 style="display: block; opacity: 1; top: 0px; left: 0px;">
 
             </div>
         </div>
         <div class="banner-text" style="display: none;">
-            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0" style="display: block; opacity: 1; top: 0px; left: 0px;">
+            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0"
+                 style="display: block; opacity: 1; top: 0px; left: 0px;">
 
             </div>
         </div>
@@ -62,15 +63,15 @@
 </div>
 
 <script type="text/javascript">
-    $(function() {
+    $(function () {
         var d = $("#slider-btn li");
         var j = $("#slider-back li");
         var a = $(".banner-text");
         var h = $(".slider-text");
         var e = $(".banner-txt a");
         var i = 0;
-        d.each(function(l) {
-            $(this).mouseover(function() {
+        d.each(function (l) {
+            $(this).mouseover(function () {
                 f(l)
             });
             $(this).data("index")
@@ -82,7 +83,7 @@
             var n = m.children();
             m.siblings(".banner-text").stop(true).fadeOut(100);
             m.show();
-            n.each(function() {
+            n.each(function () {
                 var o = $(this);
                 o.css({
                     display: "block",
@@ -99,7 +100,7 @@
                         1200);
                 if (o.data("class") !== undefined) {
                     o.removeClass(o.data("class"));
-                    setTimeout(function() {
+                    setTimeout(function () {
                                 o.addClass(o.data("class"))
                             },
                             0)
@@ -114,6 +115,7 @@
                     },
                     600)
         }
+
         function g() {
             i++;
             if (i == d.length) {
@@ -121,29 +123,27 @@
             }
             f(i)
         }
+
         var c = null;
         var b = $("#slider-btn");
-        var k = function() {
+        var k = function () {
             var l = b.find(".active");
-            c = setTimeout(function() {
+            c = setTimeout(function () {
                         g();
                         k()
                     },
                     l.data("delay") || 8000)
         };
         k();
-        d.hover(function() {
+        d.hover(function () {
                     clearInterval(c)
                 },
-                function() {
+                function () {
                     k()
                 });
         f(0)
     });
 </script>
-
-
-
 
 
 <div style="margin-bottom: 28px;margin-top: 23px;">
@@ -218,30 +218,51 @@
 <div class="news">
     <h2 style="text-align: center;margin-bottom: 1px;color: #0078cc;font-size: 2rem;padding-top:23px;">新闻动态</h2>
     <h2 id="news__title" class="subtitle">产品动态 行业资讯</h2>
-    <div class="news__list container">
-        {foreach $newslist as $item}
-        <div class="news__item" onclick="window.open('/newdetail/{$item.id}')">
-            <div class="news__content">
-                <div class="news__img"><img src="..{$item.news_img}"></div>
-                <p class="news__title">{$item.news_title}</p>
-                <p class="news__date">时间:{$item.create_time|date="Y-m-d"}&nbsp;&nbsp;浏览量:{$item.read_num}</p>
-                <p class="news__intro">{$item.news_msg|mb_substr=0,53,'utf-8'}... </p>
+    <ul class="shop">
+        <li>
+            <div style="width: 380px;height:80px;background-color: #3eb2e5">
+                <p>行业资讯</p>
             </div>
-        </div>
-        {/foreach}
-    </div>
-    <div class="news__list container" style="margin-top:20px;">
-        {foreach $newslist2 as $item}
-        <div class="news__item" onclick="window.open('/newdetail/{$item.id}')">
-            <div class="news__content">
-                <div class="news__img"><img src="..{$item.news_img}"></div>
-                <p class="news__title">{$item.news_title}</p>
-                <p class="news__date">时间:{$item.create_time|date="Y-m-d"}&nbsp;&nbsp;浏览量:{$item.read_num}</p>
-                <p class="news__intro">{$item.news_msg|mb_substr=0,53,'utf-8'} ... </p>
+            <ul>
+                {foreach $hangye as $item}
+                <li>
+                    <span class="triangle"></span>
+                    <a target="_blank"  href="newdetail/{$item.id}">{$item.news_title}</a>
+                </li>
+                {/foreach}
+            </ul>
+        </li>
+        <li>
+            <div style="width: 380px;height:80px;background-color: #3eb2e5">
+                <p>公司动态</p>
             </div>
-        </div>
-        {/foreach}
-    </div>
+            <ul>
+                {foreach $gongsi as $item}
+                <li>
+                    <span class="triangle"></span>
+                    <a target="_blank"  href="newdetail/{$item.id}">{$item.news_title}</a>
+                </li>
+                {/foreach}
+            </ul>
+        </li>
+        <li>
+            <div style="width: 380px;height:80px;background-color: #3eb2e5">
+                <p>热门新闻</p>
+            </div>
+            <ul>
+                {foreach $remen as $item}
+                <li>
+                    <span class="triangle"></span>
+                    <a target="_blank"  href="newdetail/{$item.id}">{$item.news_title}</a>
+                </li>
+                {/foreach}
+            </ul>
+        </li>
+    </ul>
+
+<div style="clear: both"></div>
+
+
     <div class="news__btn"><a href="/news" class="btn-all">查看更多资讯</a></div>
 </div>
 <div class="technology" style="margin-top:23px">

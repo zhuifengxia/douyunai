@@ -1917,3 +1917,68 @@ input:-ms-input-placeholder {
 .banner-area li.active {
     background-color: white;
 }
+
+
+
+
+.shop{
+    display: block;
+    list-style-type: disc;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.shop>li {
+    list-style-type: none;
+    width: 380px;
+    background-color: #fff;
+    float: left;
+    position: relative;
+}
+
+ .shop>li:nth-child(1),  .shop>li:nth-child(2) {
+    margin-right: 25px;
+}
+
+.shop>li p {
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+    position: absolute;
+    top: 23px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+ .shop>li ul {
+    margin: 10px 0 25px 0;
+}
+.shop>li ul li {
+    border-bottom: 1px dashed #b8b8b8;
+    padding-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 351px;
+    margin: 0 auto;
+    margin-top: 10px;
+    color: #464646;
+}
+
+.shop>li ul li a {
+    transition: all 0.2s linear;
+    color: #464646;
+}
+
+.triangle {
+    position: relative;
+    width: 0;
+    border-top: 6px solid transparent;
+    border-left: 11px solid #3eb2e5;
+    border-bottom: 7px solid transparent;
+    display: inline-block;
+    padding: 0 5px;
+    /* margin-left: 10px; */
+}

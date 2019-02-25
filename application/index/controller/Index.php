@@ -8,22 +8,28 @@ class Index extends Controller
     public function index()
     {
         //获取6条新闻资讯
-        $newslst=Db::table('douyun_news')
+        //行业资讯
+        $hangye=Db::table('douyun_news')
+            ->where('news_type',0)
             ->order('id desc')
-            ->limit(6)
+            ->limit(10)
             ->select();
-        $news=array();
-        $news2=array();
-        for($i=0;$i<count($newslst);$i++){
-            $newslst[$i]['news_msg']=strip_tags($newslst[$i]['news_msg']);
-            if($i<3){
-                $news[]=$newslst[$i];
-            }else{
-                $news2[]=$newslst[$i];
-            }
-        }
-        $this->assign('newslist', $news);
-        $this->assign('newslist2', $news2);
+        //公司动态
+        $gongsi=Db::table('douyun_news')
+            ->where('news_type',1)
+            ->order('id desc')
+            ->limit(10)
+            ->select();
+        //热门新闻
+        $remen=Db::table('douyun_news')
+            ->where('news_type',2)
+            ->order('id desc')
+            ->limit(10)
+            ->select();
+
+        $this->assign('hangye', $hangye);
+        $this->assign('gongsi', $gongsi);
+        $this->assign('remen', $remen);
 
         $this->assign('pagenum', 0);
         return $this->fetch('index');
