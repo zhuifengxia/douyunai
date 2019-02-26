@@ -27,7 +27,7 @@ class Admin extends Controller
     }
 
     /**
-     * 体验用户列表数据
+     * 申请体验用户列表数据
      */
     public function Experlist()
     {
@@ -45,23 +45,23 @@ class Admin extends Controller
         return $this->fetch('experience_list');
     }
 
-    //体验用户数据导出
+    //申请体验用户数据导出
     public function Experexport()
     {
-        $experModel=new Experience();
+        $experModel = new Experience();
         //设置表头：
-        $head = ['手机号', '最近一次体验时间', '体验次数'];
+        $head = ['手机号', '姓名', '备注', '提交时间'];
         //数据中对应的字段，用于读取相应数据：
-        $keys = ['user_phone', 'create_time', 'use_time'];
-        $keywords=input('keywords');
-        if($keywords){
-            $where="user_phone LIKE '%$keywords%'";
-        }else{
-            $where="1=1";
+        $keys = ['user_phone', 'user_name', 'data_remark', 'create_time'];
+        $keywords = input('keywords');
+        if ($keywords) {
+            $where = "user_phone LIKE '%$keywords%'";
+        } else {
+            $where = "1=1";
         }
-        $expers=$experModel->dataList($where,1);
+        $expers = $experModel->dataList($where, 1);
         //导出数据
-        Util::dataexport('体验用户数据-'.date('Y.m.d'), $expers, $head, $keys);
+        Util::dataexport('申请体验用户数据-' . date('Y.m.d'), $expers, $head, $keys);
     }
 
 

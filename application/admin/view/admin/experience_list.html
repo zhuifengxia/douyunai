@@ -1,4 +1,4 @@
-<div class="panel-heading">用户体验列表
+<div class="panel-heading">用户申请体验列表
     <a style="float:right;margin-right:10px;margin-top:-6px;" onclick="experexport()" href="javascript:void(0)" class="btn btn-primary">导出数据</a>
 </div>
 
@@ -15,16 +15,18 @@
                         <thead>
                         <tr>
                             <th>手机号</th>
-                            <th>最近一次体验时间</th>
-                            <th>体验次数</th>
+                            <th>姓名</th>
+                            <th>备注</th>
+                            <th>提交时间</th>
                         </tr>
                         </thead>
                         <tbody>
                         {foreach $expers as $item}
                         <tr>
-                            <td style="width:33%">{$item.user_phone}</td>
-                            <td style="width:33%">{$item.create_time|date="Y-m-d H:i:s"}</td>
-                            <td style="width:33%">{$item.use_time}</td>
+                            <td style="width:25%">{$item.user_phone}</td>
+                            <td style="width:25%">{$item.user_name}</td>
+                            <td style="width:25%">{$item.data_remark}</td>
+                            <td style="width:25%">{$item.create_time|date="Y-m-d H:i:s"}</td>
                         </tr>
                         {/foreach}
                         </tbody>
