@@ -39,7 +39,7 @@
             </div>
             <p class="error"></p>
             <div class="form btnform">
-                <input type="button" value="提交" class="btn" onclick="submit_test()" style="background: #2a499d;">
+                <input type="button" value="提交" class="btn" onclick="submit_test(0)" style="background: #2a499d;">
             </div>
         </div>
     </div>
@@ -103,11 +103,18 @@
     })
 
     //提交免费试用
-    function submit_test() {
+    function submit_test(obj) {
         $(".error").html("");
-        var test_name=$("#test_name").val();
-        var test_tel=$("#test_tel").val();
-        var test_remark=$("#test_remark").val();
+        if(obj==0){
+            var test_name=$("#test_name").val();
+            var test_tel=$("#test_tel").val();
+            var test_remark=$("#test_remark").val();
+        }else{
+            var test_name=$("#test_name1").val();
+            var test_tel=$("#test_tel1").val();
+            var test_remark="";
+        }
+
         if(test_name==""){
             $(".error").html("请输入姓名");
             return false;
@@ -135,6 +142,8 @@
                 $(".profession.txt").val("")
                 $(".territory").val("")
                 $(".error").html("")
+                $("#test_name1").val("");
+                $("#test_tel1").val("");
                 popup({
                     type: "success", msg: "提交成功，我们将于一个工作日内联系您", delay: 1000, callBack: function () {
                         console.log("callBack~~~")

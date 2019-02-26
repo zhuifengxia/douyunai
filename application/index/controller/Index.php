@@ -158,8 +158,7 @@ class Index extends Controller
             'user_name' => $test_name,
             'user_phone' => $test_tel,
             'data_remark' => $test_remark,
-            'create_time' => time(),
-            'data_type'=>1
+            'create_time' => time()
         );
         Db::table('douyun_experience')
             ->insert($data);

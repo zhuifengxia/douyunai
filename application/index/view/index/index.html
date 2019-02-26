@@ -198,17 +198,17 @@
 
 
         <div class="speech__form" style="clear: both;">
-            <div class=""><input id="js_inputPhone" class="speech__input input-phone" type="text"
+            <div class=""><input id="test_tel1" class="speech__input input-phone" type="text"
                                  placeholder="请输入您的手机号码">
-                <div id="js_phoneError" class="input--error vhidden"></div>
+                <div id="js_phoneError" class="input--error vhidden error"></div>
+            </div>
+            <div class="">
+                <input id="test_name1" class="speech__input input-phone" type="text"
+                                 placeholder="请输入您的姓名">
+                <div id="js_nameError" class="input--error vhidden error"></div>
             </div>
             <div>
-                <div class="speech__code"><span id="jsGetCode" class="speech__code__btn">获取验证码</span></div>
-                <input id="js_inputCode" class="speech__input input-code" type="text" placeholder="验证码">
-                <div id="js_smsCodeError" class="input--error vhidden"></div>
-            </div>
-            <div>
-                <button id="js_expBtn" class="speech__btn">立即体验</button>
+                <button class="speech__btn" onclick="submit_test(1)">立即体验</button>
             </div>
         </div>
     </div>
