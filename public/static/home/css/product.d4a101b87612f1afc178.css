@@ -1606,3 +1606,125 @@ a {
     background: url(../img/applicationBorder.png) no-repeat center;
     color:#fff;
 }
+
+
+.cp {
+    margin: 0 auto;
+    padding-bottom: 60px;
+    margin-top: 50px;
+}
+.cp h1 {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: normal;
+    color: #333333;
+    margin: 0 0 1.25rem 0;
+}
+.plan-list {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.cp p {
+    text-align: center;
+    font-size: 24px;
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(52,63,75,.12), inset 0 4px 0 0 #0078cc;
+    width: 970px;
+    margin: 0 auto;
+    padding: 24px 0;
+    color: #0078cc;
+    font-weight: 400;
+}
+
+.plan {
+    max-width: 240px;
+    padding: 30px;
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(52,63,75,.12), inset 0 4px 0 0 #0078cc;
+    color: #545d69;
+    text-align: center;
+    flex-direction: column;
+    width: 160px;
+    height: 70px;
+    margin: 0 15px 20px;
+}
+
+.meta__name {
+    font-size: 1.125rem;
+    margin-bottom: 20px;
+}
+
+.meta__price {
+    margin-bottom: 10px;
+    border-radius: 3px;
+    font-size: 2rem;
+    color: #545d69;
+}
+.meta__price .currency-symbol {
+    font-size: 1.25rem;
+    vertical-align: super;
+}
+
+.meta__price span {
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+.ysdb {
+    background-color: #0078cc;
+    margin: 0 auto;
+    padding: 50px 0;
+    position: relative;
+    padding-bottom: 60px;
+}
+.ysdb h1 {
+    margin-bottom: 0;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+    font-size: 30px;
+    padding-bottom: 12px;
+}
+.vs {
+    width: 104px;
+    margin: 0 auto;
+    position: relative;
+}
+.ysdb .table {
+    width: 960px;
+    margin: 0 auto;
+    margin: 30px auto 0;
+    color: #fff;
+    text-align: center;
+    margin-top: -84px;
+}
+
+.ysdb .table .th_l {
+    background: #eaeaea;
+    color: #0078cc;
+    font-weight: bold;
+}
+.ysdb .table th {
+    height: 60px;
+    line-height: 60px;
+    font-size: 24px;
+    font-weight: inherit;
+}
+.ysdb .table .th_r {
+    background: #eaeaea;
+    color: #0078cc;
+    font-weight: bold;
+}
+.ysdb .table td {
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: inherit;
+    background: #0087ce;
+}
