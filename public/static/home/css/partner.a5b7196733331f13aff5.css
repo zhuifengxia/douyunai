@@ -1020,7 +1020,7 @@ a {
 }
 .title__line{
   width:40px;
-  border-bottom:2px solid #333;
+  border-bottom:2px solid white;
   margin:0 auto;
 }
 .subtitle{
